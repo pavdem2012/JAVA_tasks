@@ -17,6 +17,12 @@ public class TextGames {
         System.out.println(Str.toUpperCase());
         System.out.print("Первоначальный вариант: ");
         System.out.println(Str);
+
+        String Str3 = new String("ТИХО СКАЗАЛ");
+        System.out.print("В нижнем регистре: ");
+        System.out.println(Str3.toLowerCase());
+        System.out.print("Первоначальный вариант: ");
+        System.out.println(Str3);
     }
 
 }
