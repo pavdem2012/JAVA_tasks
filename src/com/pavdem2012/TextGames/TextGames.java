@@ -28,8 +28,7 @@ public class TextGames {
     
     /**
      * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
-     * @param text1 this is text for processing
-     * @param text2 this is text for processing
+     * @param inputText this is text for processing
      * @return String with a text length information
      */
     public String getStringWithLength(String inputText) {
@@ -38,7 +37,7 @@ public class TextGames {
     }
     /**
      * Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"
-     * @param text3 this is text for processing
+     * @param inputText this is text for processing
      * @return String with a text in upper case and initial version of text4
      */
     public String getStringWithUpperCase(String inputText) {
@@ -47,7 +46,7 @@ public class TextGames {
     }
     /**
      * Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"
-     * @param text4 this is text for processing
+     * @param inputText this is text for processing
      * @return String with a text in lower case and initial version of text4
      */
     public String getStringWithLowerCase(String inputText) {
