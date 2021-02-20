@@ -24,8 +24,13 @@ public class TextGames {
      */
     String text4 = "\"ТИХО СКАЗАЛ\"";
     System.out.println(textGames.getStringWithLowerCase(text4));
+        
+    /**
+     * Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
+     */
+    String text5 = "                        \"Неопрен бяка рвётся сам\"         ";
+    System.out.println(textGames.getStringWithotTrim(text5));
     }
-    
     /**
      * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
      * @param inputText this is text for processing
@@ -51,6 +56,15 @@ public class TextGames {
      */
     public String getStringWithLowerCase(String inputText) {
         String allText = "В нижнем регистре: " + inputText.toLowerCase() + ".\nПервоначальный вариант: " + inputText + ".\n";
+        return allText;
+    }
+    /**
+     *  Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
+     * @param inputText this is text for processing
+     * @return String without leading and trailing spaces
+     */
+    public String getStringWithotTrim(String inputText) {
+        String allText = "Без пробелов в начале и конце: " + inputText.trim() + ".\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
 }
