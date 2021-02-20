@@ -11,7 +11,12 @@ public class TextGames {
 
         System.out.print("Длина строки \"Обожаю придумывать настойки\" - " );
         System.out.println(Str2.length());
-
+        
+        String Str = new String("Перестань кричать");
+        System.out.print("В верхнем регистре: ");
+        System.out.println(Str.toUpperCase());
+        System.out.print("Первоначальный вариант: ");
+        System.out.println(Str);
     }
 
 }
