@@ -4,32 +4,32 @@ public class TextGames {
 
     public static void main(String[] args) {
     
-    /**
-     * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
-     */
-    String text1 = "\"Паша любит рыбалку\"";
-    String text2 = "\"Обожаю придумывать настойки\"";
-    TextGames textGames = new TextGames();
-    System.out.println(textGames.getStringWithLength(text1));
-    System.out.println(textGames.getStringWithLength(text2));
-    
-    /**
-     * Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"
-     */
-    String text3 = "\"Перестань кричать\"";
-    System.out.println(textGames.getStringWithUpperCase(text3));
-
-    /**
-     * Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"
-     */
-    String text4 = "\"ТИХО СКАЗАЛ\"";
-    System.out.println(textGames.getStringWithLowerCase(text4));
+        /**
+         * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
+         */
+        String text1 = "\"Паша любит рыбалку\"";
+        String text2 = "\"Обожаю придумывать настойки\"";
+        TextGames textGames = new TextGames();
+        System.out.println(textGames.getStringWithLength(text1));
+        System.out.println(textGames.getStringWithLength(text2));
         
-    /**
-     * Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
-     */
-    String text5 = "                        \"Неопрен бяка рвётся сам\"         ";
-    System.out.println(textGames.getStringWithotTrim(text5));
+        /**
+         * Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"
+         */
+        String text3 = "\"Перестань кричать\"";
+        System.out.println(textGames.getStringWithUpperCase(text3));
+    
+        /**
+         * Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"
+         */
+        String text4 = "\"ТИХО СКАЗАЛ\"";
+        System.out.println(textGames.getStringWithLowerCase(text4));
+            
+        /**
+         * Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
+         */
+        String text5 = "                        \"Неопрен бяка рвётся сам\"         ";
+        System.out.println(textGames.trimString(text5));
     }
     /**
      * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
@@ -63,7 +63,7 @@ public class TextGames {
      * @param inputText this is text for processing
      * @return String without leading and trailing spaces
      */
-    public String getStringWithotTrim(String inputText) {
+    public String trimString(String inputText) {
         String allText = "Без пробелов в начале и конце: " + inputText.trim() + ".\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
