@@ -30,6 +30,11 @@ public class TextGames {
          */
         String text5 = "                        \"Неопрен бяка рвётся сам\"         ";
         System.out.println(textGames.trimString(text5));
+        /**
+         * Найти индекс слова бяка в строке. Вывевсти строку и индекс. "Вино бяка забродило" 
+         */
+        String text6 = "\"Вино бяка забродило\" ";
+        System.out.println(textGames.indexOfSay(text6));
     }
     /**
      * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
@@ -65,6 +70,15 @@ public class TextGames {
      */
     public String trimString(String inputText) {
         String allText = "Без пробелов в начале и конце: " + inputText.trim() + ".\nПервоначальный вариант: " + inputText + ".\n";
+        return allText;
+    }
+    /**
+     * Найти индекс слова бяка в строке. Вывевсти строку и индекс. "Вино бяка забродило"
+     * @param inputText this is text for processing
+     * @return initial version of text6 and index of word "бяка"
+     */
+    public String indexOfSay(String inputText) {
+        String allText = "Первоначальный вариант: " + inputText + ".\nИндекс слова бяка: " + inputText.indexOf("бяка");
         return allText;
     }
 }
