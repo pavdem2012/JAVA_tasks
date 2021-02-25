@@ -11,7 +11,7 @@ public class TextGames {
         TextGames textGames = new TextGames();
         System.out.println(textGames.getStringWithLength(text1));
         System.out.println(textGames.getStringWithLength(text2));
-        
+
         /**
          * Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"
          */
@@ -23,7 +23,7 @@ public class TextGames {
          */
         String text4 = "\"ТИХО СКАЗАЛ\"";
         System.out.println(textGames.getStringWithLowerCase(text4));
-            
+
         /**
          * Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
          */
@@ -35,6 +35,7 @@ public class TextGames {
          */
         String text6 = "Вино бяка забродило";
         System.out.println(textGames.indexOfSay(text6));
+
         /**
          * Обрезать строку в начале и конце, так чтобы осталось только "Лето закончилось". Изначальный вариант: "бяка Лето закончилось. бяка". 
          */
@@ -45,6 +46,8 @@ public class TextGames {
          * Вырезать слово бяка из строки. Вывевсти обе строки. "Вино бяка забродило" 
          */
         System.out.println(textGames.subStringWithoutWord(text6));
+        // Альтернативное решение: 
+        System.out.println(textGames.subStringWithoutWord2(text6));
 
         /**
          * Заменить в строке все вхождения слова «бяка» на «вырезано цензурой».
@@ -128,11 +131,21 @@ public class TextGames {
      */
     public String subStringWithoutWord(String inputText) {
         String newStr = inputText.replaceAll("бяка ", "");
-        String allText = "Без бяка: " + newStr 
+        String allText ="Простой вариант:" + "\nБез бяка: " + newStr 
                 + "\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
-        
+
+    // Альтернативное решение:
+    public String subStringWithoutWord2(String inputText) {
+        String toRemove = "бяка";
+        int word = inputText.indexOf(toRemove);
+        String newStr = inputText.substring(0,word) + inputText.substring(word+toRemove.length(),inputText.length());        
+        String allText = "Альтернативный вариант:" + "\nБез бяка: " + newStr 
+                + "\nПервоначальный вариант: " + inputText + ".\n";
+        return allText;
+    }
+
     /**
      * Заменить в строке все вхождения слова «бяка» на «вырезано цензурой»
      * @param inputText this is text for processing
