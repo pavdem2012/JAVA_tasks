@@ -3,7 +3,6 @@ package com.pavdem2012.TextGames;
 public class TextGames {
 
     public static void main(String[] args) {
-    
         /**
          * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
          */
@@ -18,7 +17,7 @@ public class TextGames {
          */
         String text3 = "\"Перестань кричать\"";
         System.out.println(textGames.getStringWithUpperCase(text3));
-    
+
         /**
          * Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"
          */
@@ -41,6 +40,11 @@ public class TextGames {
          */
         String text7 = "бяка. Лето закончилось. бяка";
         System.out.println(textGames.subStringWithoutFirstAndLastWords(text7));
+
+        /**
+         * Вырезать слово бяка из строки. Вывевсти обе строки. "Вино бяка забродило" 
+         */
+        System.out.println(textGames.subStringWithoutWord(text6));
     }
 
     /**
@@ -108,4 +112,17 @@ public class TextGames {
                             + "\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
+
+    /**
+     * Вырезать слово бяка из строки. Вывевсти обе строки. "Вино бяка забродило"  
+     * @param inputText this is text for processing
+     * @return String without "бяка"
+     */
+    public String subStringWithoutWord(String inputText) {
+        String newStr = inputText.replaceAll("бяка ", "");
+        String allText = "Без бяка: " + newStr 
+                + "\nПервоначальный вариант: " + inputText + ".\n";
+        return allText;
+    }
+ 
 }
