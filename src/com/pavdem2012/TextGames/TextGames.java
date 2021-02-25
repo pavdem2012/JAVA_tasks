@@ -30,12 +30,14 @@ public class TextGames {
          */
         String text5 = "                        \"Неопрен бяка рвётся сам\"         ";
         System.out.println(textGames.trimString(text5));
+
         /**
-         * Найти индекс слова бяка в строке. Вывевсти строку и индекс. "Вино бяка забродило" 
+         * Обрезать строку в начале и конце, так чтобы осталось только "Лето закончилось". Изначальный вариант: "бяка Лето закончилось. бяка". 
          */
-        String text6 = "\"Вино бяка забродило\" ";
-        System.out.println(textGames.indexOfSay(text6));
+        String text6 = "бяка. Лето закончилось. бяка";
+        System.out.println(textGames.substringWithoutFirstAndLastWords(text6));
     }
+
     /**
      * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
      * @param inputText this is text for processing
@@ -45,6 +47,7 @@ public class TextGames {
         String allText = inputText + ". " + "Длина текста: " + inputText.length() + ".\n";
         return allText;
     }
+
     /**
      * Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"
      * @param inputText this is text for processing
@@ -54,6 +57,7 @@ public class TextGames {
         String allText = "В верхнем регистре: " + inputText.toUpperCase() + ".\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
+
     /**
      * Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"
      * @param inputText this is text for processing
@@ -63,6 +67,7 @@ public class TextGames {
         String allText = "В нижнем регистре: " + inputText.toLowerCase() + ".\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
+
     /**
      *  Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
      * @param inputText this is text for processing
@@ -72,6 +77,7 @@ public class TextGames {
         String allText = "Без пробелов в начале и конце: " + inputText.trim() + ".\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
+
     /**
      * Найти индекс слова бяка в строке. Вывевсти строку и индекс. "Вино бяка забродило"
      * @param inputText this is text for processing
@@ -79,6 +85,21 @@ public class TextGames {
      */
     public String indexOfSay(String inputText) {
         String allText = "Первоначальный вариант: " + inputText + ".\nИндекс слова бяка: " + inputText.indexOf("бяка");
+        return allText;    
+    }
+
+    /**
+     * Обрезать строку в начале и конце, так чтобы осталось только "Лето закончилось". 
+     * Изначальный вариант: "бяка Лето закончилось. бяка"
+     * @param inputText this is text for processing
+     * @return String without leading and trailing "бяка"
+     */
+    public String substringWithoutFirstAndLastWords(String inputText) {
+        int startNum = inputText.indexOf(" ");
+        int endNum = inputText.lastIndexOf(" ");
+        String inputTextFiltered = inputText.substring(startNum, endNum).trim();
+        String allText = "Без бяка в начале и конце: " + inputTextFiltered 
+                + "\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
 }
