@@ -35,7 +35,7 @@ public class TextGames {
          * Обрезать строку в начале и конце, так чтобы осталось только "Лето закончилось". Изначальный вариант: "бяка Лето закончилось. бяка". 
          */
         String text6 = "бяка. Лето закончилось. бяка";
-        System.out.println(textGames.substringWithoutFirstAndLastWords(text6));
+        System.out.println(textGames.subStringWithoutFirstAndLastWords(text6));
     }
 
     /**
@@ -94,7 +94,7 @@ public class TextGames {
      * @param inputText this is text for processing
      * @return String without leading and trailing "бяка"
      */
-    public String substringWithoutFirstAndLastWords(String inputText) {
+    public String subStringWithoutFirstAndLastWords(String inputText) {
         int startNum = inputText.indexOf(" ");
         int endNum = inputText.lastIndexOf(" ");
         String inputTextFiltered = inputText.substring(startNum, endNum).trim();
