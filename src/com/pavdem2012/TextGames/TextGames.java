@@ -45,6 +45,14 @@ public class TextGames {
          * Вырезать слово бяка из строки. Вывевсти обе строки. "Вино бяка забродило" 
          */
         System.out.println(textGames.subStringWithoutWord(text6));
+
+        /**
+         * Заменить в строке все вхождения слова «бяка» на «вырезано цензурой».
+         * "Вчера было холодно, бяка. Потому мы остались дома, бяка. А так хотелось купаться, но вода уже бяка.
+         */
+        String text8 = " \"Вчера было холодно, бяка. Потому мы остались дома, бяка."
+                + " А так хотелось купаться, но вода уже бяка.\"";
+        System.out.println(textGames.subStringReplacetWord(text8));
     }
 
     /**
@@ -124,5 +132,16 @@ public class TextGames {
                 + "\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
- 
-}
+        
+    /**
+     * Заменить в строке все вхождения слова «бяка» на «вырезано цензурой»
+     * @param inputText this is text for processing
+     * @return String replaced "бяка" to <Вырезано цензурой>
+     */
+    public String subStringReplacetWord(String inputText) {
+        String newStr = inputText.replace(" бяка", "<Вырезано цензурой>");
+        String allText = "\"Бяка\" заменено на <Вырезано цензурой>:" + newStr 
+                + "\nПервоначальный вариант:" + inputText + ".\n";
+        return allText;
+    }
+ }
