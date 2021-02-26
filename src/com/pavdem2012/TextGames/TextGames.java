@@ -3,59 +3,45 @@ package com.pavdem2012.TextGames;
 public class TextGames {
 
     public static void main(String[] args) {
-        /**
-         * Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.
-         */
+        
+        //Вывести строки "Паша любит рыбалку", "Обожаю придумывать настойки" и их длину.       
         String text1 = "\"Паша любит рыбалку\"";
         String text2 = "\"Обожаю придумывать настойки\"";
         TextGames textGames = new TextGames();
         System.out.println(textGames.getStringWithLength(text1));
         System.out.println(textGames.getStringWithLength(text2));
 
-        /**
-         * Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"
-         */
+        //Вывести строку в верхнем регистре, вывести первоначальный вариант. "Перестань кричать"        
         String text3 = "\"Перестань кричать\"";
         System.out.println(textGames.getStringWithUpperCase(text3));
 
-        /**
-         * Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"
-         */
+        // Вывести строку в нижнем регистре, вывести первоначальный вариант. "ТИХО СКАЗАЛ"        
         String text4 = "\"ТИХО СКАЗАЛ\"";
         System.out.println(textGames.getStringWithLowerCase(text4));
 
-        /**
-         * Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "
-         */
+        //Убрать пробелы в начале и конце строки. Вывести результат. "                        Неопрен бяка рвётся сам         "         
         String text5 = "                        \"Неопрен бяка рвётся сам\"         ";
         System.out.println(textGames.trimString(text5));
 
-        /**
-         * Найти индекс слова бяка в строке. Вывевсти строку и индекс. "Вино бяка забродило" 
-         */
+        //Найти индекс слова бяка в строке. Вывевсти строку и индекс. "Вино бяка забродило"          
         String text6 = "Вино бяка забродило";
         System.out.println(textGames.indexOfSay(text6));
 
-        /**
-         * Обрезать строку в начале и конце, так чтобы осталось только "Лето закончилось". Изначальный вариант: "бяка Лето закончилось. бяка". 
-         */
+        //Обрезать строку в начале и конце, так чтобы осталось только "Лето закончилось". Изначальный вариант: "бяка Лето закончилось. бяка".        
         String text7 = "бяка. Лето закончилось. бяка";
         System.out.println(textGames.subStringWithoutFirstAndLastWords(text7));
 
-        /**
-         * Вырезать слово бяка из строки. Вывевсти обе строки. "Вино бяка забродило" 
-         */
-        System.out.println(textGames.subStringWithoutWord(text6));
-        // Альтернативное решение: 
-        System.out.println(textGames.subStringWithoutWord2(text6));
+        //Вырезать слово бяка из строки. Вывевсти обе строки. "Вино бяка забродило"          
+        System.out.println(textGames.subStringWithoutWord(text6, " бяка"));
 
-        /**
-         * Заменить в строке все вхождения слова «бяка» на «вырезано цензурой».
-         * "Вчера было холодно, бяка. Потому мы остались дома, бяка. А так хотелось купаться, но вода уже бяка.
-         */
+        // Альтернативное решение: 
+        System.out.println(textGames.subStringWithoutWord2(text6, " бяка"));
+
+        //Заменить в строке все вхождения слова «бяка» на «вырезано цензурой».
+        //"Вчера было холодно, бяка. Потому мы остались дома, бяка. А так хотелось купаться, но вода уже бяка.         
         String text8 = " \"Вчера было холодно, бяка. Потому мы остались дома, бяка."
                 + " А так хотелось купаться, но вода уже бяка.\"";
-        System.out.println(textGames.subStringReplacetWord(text8));
+        System.out.println(textGames.subStringReplacetWord(text8, "бяка", "<Вырезано цензурой>"));
     }
 
     /**
@@ -129,19 +115,23 @@ public class TextGames {
      * @param inputText this is text for processing
      * @return String without "бяка"
      */
-    public String subStringWithoutWord(String inputText) {
-        String newStr = inputText.replaceAll("бяка ", "");
-        String allText ="Простой вариант:" + "\nБез бяка: " + newStr 
+    public String subStringWithoutWord(String inputText,String wordToRemove) {      
+        String newStr = inputText.replaceAll(wordToRemove, "");
+        String allText ="Простой вариант:" + "\nБез " + wordToRemove +": " + newStr 
                 + "\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
 
-    // Альтернативное решение:
-    public String subStringWithoutWord2(String inputText) {
-        String toRemove = "бяка";
-        int word = inputText.indexOf(toRemove);
-        String newStr = inputText.substring(0,word) + inputText.substring(word+toRemove.length(),inputText.length());        
-        String allText = "Альтернативный вариант:" + "\nБез бяка: " + newStr 
+    /** 
+     * Альтернативное решение:     
+     * @param inputText this is text for processing
+     * @param wordToRemove this is text for remove
+     * @return String without "бяка"
+     */
+    public String subStringWithoutWord2(String inputText, String wordToRemove) {
+        int wordIndex = inputText.indexOf(wordToRemove);
+        String newStr = inputText.substring(0,wordIndex) + inputText.substring(wordIndex+wordToRemove.length(),inputText.length());        
+        String allText = "Альтернативный вариант:" + "\nБез " + wordToRemove +": " + newStr 
                 + "\nПервоначальный вариант: " + inputText + ".\n";
         return allText;
     }
@@ -151,9 +141,9 @@ public class TextGames {
      * @param inputText this is text for processing
      * @return String replaced "бяка" to <Вырезано цензурой>
      */
-    public String subStringReplacetWord(String inputText) {
-        String newStr = inputText.replace(" бяка", "<Вырезано цензурой>");
-        String allText = "\"Бяка\" заменено на <Вырезано цензурой>:" + newStr 
+    public String subStringReplacetWord(String inputText, String wordToRemove, String wordToReplace) {
+        String replaceWordIndex = inputText.replace(wordToRemove, wordToReplace);
+        String allText = wordToRemove + " заменено на " + wordToReplace +":" + replaceWordIndex 
                 + "\nПервоначальный вариант:" + inputText + ".\n";
         return allText;
     }
