@@ -3,8 +3,13 @@ public class Main {
     public static void main(String[] args) {
         //В переменной integer хранится число 2 или 3 или 4. Вывести сообщение 
         //"В переменной integer хранится " и число прописью.
-        Integer number = 0;
+        Integer number = 3;
         ConditionalOperator conditionalOperator = new ConditionalOperator();
-        System.out.print("В переменной Integer хранится число " + conditionalOperator.detectNumber(number));
+        System.out.print("В переменной Integer хранится число " + conditionalOperator.detectNumber(number) + ".");
+
+        //Сравнить 2 числа, Вывести большее. Если они равны то вывести "Числа равны."
+        Integer a = 5;
+        Integer b = 5;
+        System.out.println("\n" + conditionalOperator.compareNumber(a, b));
     }
 }
