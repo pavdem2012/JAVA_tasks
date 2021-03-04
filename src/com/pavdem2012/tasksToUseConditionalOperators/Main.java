@@ -14,7 +14,9 @@ public class Main {
 
         //Написать программу, которая делает заглавной первую букву предложения(Если это необходимо),
         //ставит точку в конце предложения.  Строку взять любую из предыдущих, без точки.
-        String text = " перестань кричать ";
+        String text = "   перестань кричать ";
         System.out.println(conditionalOperator.firstToUpperCaseEndPoint(text));
+        //Альтернативное решение
+        System.out.println(conditionalOperator.firstToUpperCaseEndPointOther(text));
     }
 }

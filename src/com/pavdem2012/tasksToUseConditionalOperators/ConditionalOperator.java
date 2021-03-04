@@ -39,6 +39,7 @@ public class ConditionalOperator {
         }
         return compareString;
     }
+
     /**
      * Написать программу, которая делает заглавной первую букву предложения(Если это необходимо), 
      * ставит точку в конце предложения.
@@ -58,7 +59,20 @@ public class ConditionalOperator {
         if(lastSymbol != '.') {
             outputText = outputText + '.';    
         }
-        
         return outputText ;
+    }
+
+    //Альтернативное решение
+    public String firstToUpperCaseEndPointOther (String inputText) {
+        inputText = inputText.trim();
+        String firstSymbol = inputText.substring(0, 1);
+        String processedText = inputText;
+        if (!firstSymbol.equals(firstSymbol.toUpperCase())) {
+            processedText = firstSymbol.toUpperCase() + inputText.substring(1, inputText.length());
+        }
+        if (!inputText.endsWith(".")) {
+            processedText = processedText + ".";
+        }
+        return processedText;
     }
 }
