@@ -2,7 +2,7 @@ package com.pavdem2012.tasksToUseConditionalOperators;
 
 public class ConditionalOperator {
     /**
-     * Вывод сообщения "В переменной integer хранится " и число прописью.
+     * Вывод сообщения "В переменной типа integer хранится " и число прописью.
      * @param number this is number for processing.
      * @return number in words.
      */
@@ -20,7 +20,7 @@ public class ConditionalOperator {
         }
         return numberString;
     }
-    
+
     /**
      * Сравнить 2 числа, Вывести большее. Если они равны то вывести "Числа равны"
      * @param number this is number for processing.
@@ -62,7 +62,12 @@ public class ConditionalOperator {
         return outputText ;
     }
 
-    //Альтернативное решение
+    /**Альтернативное решение
+     * Написать программу, которая делает заглавной первую букву предложения(Если это необходимо), 
+     * ставит точку в конце предложения.
+     * @param inputText this is text for processing
+     * @return capitalized text with a period at the end, if necessary.
+     */
     public String firstToUpperCaseEndPointOther (String inputText) {
         inputText = inputText.trim();
         String firstSymbol = inputText.substring(0, 1);
@@ -72,6 +77,31 @@ public class ConditionalOperator {
         }
         if (!inputText.endsWith(".")) {
             processedText = processedText + ".";
+        }
+        return processedText;
+    }
+
+    /**
+     *  корзине несколько яблок. Если одно яблоко то вывести "Яблоко одно",
+     *  Если яблок меньше трёх, то "Мало яблок", если яблок 3 или больше, 
+     *  то "Яблок хватит всем"
+     * @param inputText this is text for processing
+     * @return message about count of apple
+     */
+    public String appleCounter (String inputText) {
+        String regex = "[^\\d]+";
+        String[] str = inputText.split(regex);
+        String appleCountString = str[1];
+        int appleCount = Integer.parseInt(appleCountString);
+        String processedText = "";
+        if (appleCount==1) {
+            processedText = "Яблоко одно";
+        }
+        else if (appleCount < 3) {
+            processedText = "Мало яблок";
+        }
+        else if (appleCount >= 3) {
+            processedText = "Яблок хватит всем";
         }
         return processedText;
     }
