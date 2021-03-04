@@ -22,7 +22,7 @@ public class ConditionalOperator {
     }
     
     /**
-     * Сравнить 2 числа, Вывести большее. Если они равны то вывести "Числа равны."
+     * Сравнить 2 числа, Вывести большее. Если они равны то вывести "Числа равны"
      * @param number this is number for processing.
      * @return the highest value is either "Числа равны".
      */
@@ -38,6 +38,27 @@ public class ConditionalOperator {
             compareString = "Наибольшее число: " + Integer.toString(a);
         }
         return compareString;
+    }
+    /**
+     * Написать программу, которая делает заглавной первую букву предложения(Если это необходимо), 
+     * ставит точку в конце предложения.
+     * @param inputText this is text for processing
+     * @return capitalized text with a period at the end, if necessary.
+     */
+    public String firstToUpperCaseEndPoint (String inputText) {    
+        inputText = inputText.trim();
+        char[] symbolsArray = inputText.toCharArray();
+        char firstSymbol = symbolsArray[0];
+        if(firstSymbol != Character.toUpperCase(firstSymbol)) { 
+            symbolsArray[0] = Character.toUpperCase(firstSymbol);        
+        }
+        String outputText = new String();
+        outputText = String.valueOf(symbolsArray);
+        char lastSymbol = symbolsArray[inputText.length()-1];
+        if(lastSymbol != '.') {
+            outputText = outputText + '.';    
+        }
         
+        return outputText ;
     }
 }

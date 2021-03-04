@@ -11,5 +11,10 @@ public class Main {
         Integer a = 5;
         Integer b = 5;
         System.out.println("\n" + conditionalOperator.compareNumber(a, b));
+
+        //Написать программу, которая делает заглавной первую букву предложения(Если это необходимо),
+        //ставит точку в конце предложения.  Строку взять любую из предыдущих, без точки.
+        String text = " перестань кричать ";
+        System.out.println(conditionalOperator.firstToUpperCaseEndPoint(text));
     }
 }
