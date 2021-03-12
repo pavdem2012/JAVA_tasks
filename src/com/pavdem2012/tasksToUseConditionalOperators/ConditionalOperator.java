@@ -168,4 +168,26 @@ public class ConditionalOperator {
         }
         return numberMonth;
     }
+
+    /**
+     * Переменная содержит код языка. МОгут быть три варианта: "en", "ru", "fr". 
+     * Вывести дни недели через запятую, на заданном языке, в зависимости от кода языка.
+     * @param inputText this is text for processing
+     * @return the names of the days of the week in the selected language
+     */
+    public String outputNamesOfDays (String inputText) {
+        inputText = inputText.trim();
+        inputText = inputText.toLowerCase();
+        String namesOfDays; 
+        switch (inputText) {
+            case "en":  namesOfDays = "monday, tuesday, wednesday, thursday, friday, saturday, sunday.";
+                 break;
+            case "ru":  namesOfDays = "ПОНЕДЕЛЬНИК, ВТОРНИК, СРЕДА, ЧЕТВЕРГ, ПЯТНИЦА, СУББОТА, ВОСКРЕСЕНЬЕ.";
+                 break;
+            case "fr":  namesOfDays = "lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.";
+                 break;
+            default:  namesOfDays = "\"ошибка ввода\"";
+        }
+        return namesOfDays;
+    }
 }
