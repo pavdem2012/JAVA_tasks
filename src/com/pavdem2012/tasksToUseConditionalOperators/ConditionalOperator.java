@@ -190,4 +190,37 @@ public class ConditionalOperator {
         }
         return namesOfDays;
     }
+
+    public String detectCountOfDay(Integer number) {
+        String countOfDay; 
+        switch (number) {
+            case 1:  countOfDay = "31";
+                break;
+            case 2:  countOfDay = "28";
+                break;
+            case 3:  countOfDay = "31";
+                break;
+            case 4:  countOfDay = "30";
+                break;
+            case 5:  countOfDay = "31";
+                break;
+            case 6:  countOfDay = "30";
+                break;
+            case 7:  countOfDay = "31";
+                break;
+            case 8:  countOfDay = "31";
+                break;
+            case 9:  countOfDay = "30";
+                break;
+            case 10:  countOfDay = "31";
+                break;
+            case 11:  countOfDay = "30";
+                break;
+            case 12:  countOfDay = "31";
+                break;
+            default:
+                countOfDay = "\"нет такого месяца\"";
+        }
+        return countOfDay;
+    }
 }

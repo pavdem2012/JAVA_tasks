@@ -43,11 +43,15 @@ public class Main {
         //Если в названии месяца есть ошибка, то вывести "Ошибка". 
         //Регистр букв и наличие пробелов в начале или конце не должны влиять на работу программы.
         String text3 = "  МаРт  ";
-        System.out.println(".\n + Порядковый номер месяца: " + conditionalOperator.detectNumberMonth(text3));
+        System.out.println("\nПорядковый номер месяца: " + conditionalOperator.detectNumberMonth(text3));
 
         //Переменная содержит код языка. МОгут быть три варианта: "en", "ru", "fr". 
         //Вывести дни недели через запятую, на заданном языке, в зависимости от кода языка.
         String text4 = "ru";
-        System.out.println("Названия дней недели: " + conditionalOperator.outputNamesOfDays(text4));
+        System.out.println("\nНазвания дней недели: " + conditionalOperator.outputNamesOfDays(text4));
+
+        //По номеру месяца определить количество дней в месяце.
+        Integer month = 2;
+        System.out.print("В месяце номер " + month + " дней: " + conditionalOperator.detectCountOfDay(month) + ".");
     }
 }
