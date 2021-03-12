@@ -127,4 +127,45 @@ public class ConditionalOperator {
         }
         return processedText;
     }
+
+    /**
+     * Дано название месяца прописью, вывести его порядковый номер. 
+     * Если в названии месяца есть ошибка, то вывести "Ошибка". 
+     * Регистр букв и наличие пробелов в начале или конце не должны влиять на работу программы.
+     * @param inputText  this is text for processing
+     * @return either a message about the ordinal number of the month, or an error message
+     */
+    public String detectNumberMonth (String inputText) {
+        inputText = inputText.trim();
+        inputText = inputText.toLowerCase();
+        String numberMonth; 
+        switch (inputText) {
+            case "январь":  numberMonth = "1";
+                 break;
+            case "февраль":  numberMonth = "2";
+                 break;
+            case "март":  numberMonth = "3";
+                 break;
+            case "апрель":  numberMonth = "4";
+                 break;
+            case "май":  numberMonth = "5";
+                 break;
+            case "июнь":  numberMonth = "6";
+                 break;
+            case "июль":  numberMonth = "7";
+                 break;
+            case "август":  numberMonth = "8";
+                 break;
+            case "сентябрь":  numberMonth = "9";
+                 break;
+            case "октябрь":  numberMonth = "10";
+                 break;
+            case "ноябрь":  numberMonth = "11";
+                 break;
+            case "декабрь":  numberMonth = "12";
+                 break;
+            default:  numberMonth = "\"ошибка\"";
+        }
+        return numberMonth;
+    }
 }

@@ -38,5 +38,11 @@ public class Main {
         String text2 = in.nextLine();
         System.out.println("В корзине лежит: " + conditionalOperator.checkingBasket(text2));
         in.close();
+
+        //Дано название месяца прописью, вывести его порядковый номер. 
+        //Если в названии месяца есть ошибка, то вывести "Ошибка". 
+        //Регистр букв и наличие пробелов в начале или конце не должны влиять на работу программы.
+        String text3 = "  МаРт  ";
+        System.out.println("Порядковый номер месяца: " + conditionalOperator.detectNumberMonth(text3));
     }
 }
