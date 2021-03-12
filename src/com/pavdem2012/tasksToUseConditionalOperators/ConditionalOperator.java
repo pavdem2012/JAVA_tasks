@@ -82,9 +82,9 @@ public class ConditionalOperator {
     }
 
     /**
-     *  корзине несколько яблок. Если одно яблоко то вывести "Яблоко одно",
-     *  Если яблок меньше трёх, то "Мало яблок", если яблок 3 или больше, 
-     *  то "Яблок хватит всем"
+     * В корзине несколько яблок. Если одно яблоко то вывести "Яблоко одно",
+     * Если яблок меньше трёх, то "Мало яблок", если яблок 3 или больше, 
+     * то "Яблок хватит всем"
      * @param inputText this is text for processing
      * @return message about count of apple
      */
@@ -102,6 +102,28 @@ public class ConditionalOperator {
         }
         else if (appleCount >= 3) {
             processedText = "Яблок хватит всем";
+        }
+        return processedText;
+    }
+    /**
+     * Если в строке описывающей коризну есть "яблоки" или "груши" или "апельсины"
+     * то вывести Фрукты. Если в строке описывающей корзину есть одновременно слова
+     * "специи" и "овощи" и "мясо", тогда вывести "суповой набор"
+     * @param inputText this is text for processing
+     * @return message about basket composition.
+     */
+    public String checkingBasket (String inputText) {
+        String stage1 = inputText.toLowerCase();
+        String processedText = "";
+        if (stage1.contains("яблок") | stage1.contains("груш") | stage1.contains("апельсин")) {
+            processedText = "Фрукты";
+        }
+        System.out.println(processedText);
+        if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо")) {
+            processedText = "Суповой набор";
+        }
+        else {
+            processedText = inputText;
         }
         return processedText;
     }

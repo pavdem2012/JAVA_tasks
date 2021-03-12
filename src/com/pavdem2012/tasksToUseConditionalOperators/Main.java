@@ -1,4 +1,7 @@
 package com.pavdem2012.tasksToUseConditionalOperators;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {        
         //В переменной типа integer хранится число 2 или 3 или 4. 
@@ -13,8 +16,10 @@ public class Main {
         Integer b = 5;
         System.out.println("\n" + conditionalOperator.compareNumber(a, b));
 
-        //Написать программу, которая делает заглавной первую букву предложения(Если это необходимо),
-        //ставит точку в конце предложения.  Строку взять любую из предыдущих, без точки.
+        //Написать программу, которая делает заглавной первую
+        //букву предложения(Если это необходимо),
+        //ставит точку в конце предложения.  Строку взять любую 
+        //из предыдущих, без точки.
         String text = "   перестань кричать ";
         System.out.println(conditionalOperator.firstToUpperCaseEndPoint(text));
         //Альтернативное решение
@@ -24,5 +29,14 @@ public class Main {
         //Если яблок меньше трёх, то "Мало яблок", если яблок 3 или больше, то "Яблок хватит всем"
         String text1 = "В корзине 3 яблока";
         System.out.println(conditionalOperator.appleCounter(text1));
+
+        //Если в строке описывающей коризну есть "яблоки" или "груши" или "апельсины" 
+        //то вывести Фрукты. Если в строке описывающей корзину есть одновременно слова 
+        //"специи" и "овощи" и "мясо", тогда вывести "суповой набор"
+        Scanner in = new Scanner(System.in);
+        System.out.print("В корзине видно: ");
+        String text2 = in.nextLine();
+        System.out.println("В корзине лежит: " + conditionalOperator.checkingBasket(text2));
+        in.close();
     }
 }
