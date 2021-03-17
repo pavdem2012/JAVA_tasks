@@ -117,13 +117,15 @@ public class ConditionalOperator {
         String processedText = "";
         if (stage1.contains("яблок") | stage1.contains("груш") | stage1.contains("апельсин")) {
             processedText = "Фрукты";
-        }
-        System.out.println(processedText);
+        }        
         if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо")) {
             processedText = "Суповой набор";
         }
+        if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо") & stage1.contains("яблок") & stage1.contains("груш") & stage1.contains("апельсин")) {
+            processedText = "Хватал всё подряд";
+        }
         else {
-            processedText = inputText;
+            processedText = "В корзине нет нужных продуктов";
         }
         return processedText;
     }
