@@ -9,14 +9,17 @@ public class ConditionalOperator {
     public String detectNumber (Integer number) {
         String numberString; 
         switch (number) {
-            case 2:  numberString = "два";
-                 break;
-            case 3:  numberString = "три";
-                 break;
-            case 4:  numberString = "четыре";
-                 break;
+            case 2:
+              numberString = "два";
+              break;
+            case 3:
+              numberString = "три";
+              break;
+            case 4:
+              numberString = "четыре";
+              break;
             default:
-                numberString = "\"необрабатываемое значение\"";
+              numberString = "\"необрабатываемое значение\"";
         }
         return numberString;
     }
@@ -142,31 +145,44 @@ public class ConditionalOperator {
         inputText = inputText.toLowerCase();
         String numberMonth; 
         switch (inputText) {
-            case "январь":  numberMonth = "1";
-                 break;
-            case "февраль":  numberMonth = "2";
-                 break;
-            case "март":  numberMonth = "3";
-                 break;
-            case "апрель":  numberMonth = "4";
-                 break;
-            case "май":  numberMonth = "5";
-                 break;
-            case "июнь":  numberMonth = "6";
-                 break;
-            case "июль":  numberMonth = "7";
-                 break;
-            case "август":  numberMonth = "8";
-                 break;
-            case "сентябрь":  numberMonth = "9";
-                 break;
-            case "октябрь":  numberMonth = "10";
-                 break;
-            case "ноябрь":  numberMonth = "11";
-                 break;
-            case "декабрь":  numberMonth = "12";
-                 break;
-            default:  numberMonth = "\"ошибка\"";
+            case "январь":
+               numberMonth = "1";
+               break;
+            case "февраль":
+               numberMonth = "2";
+               break;
+            case "март":
+               numberMonth = "3";
+               break;
+            case "апрель":
+               numberMonth = "4";
+               break;
+            case "май":
+               numberMonth = "5";
+               break;
+            case "июнь":
+               numberMonth = "6";
+               break;
+            case "июль":
+               numberMonth = "7";
+               break;
+            case "август":
+               numberMonth = "8";
+               break;
+            case "сентябрь":
+               numberMonth = "9";
+               break;
+            case "октябрь":
+               numberMonth = "10";
+               break;
+            case "ноябрь":
+               numberMonth = "11";
+               break;
+            case "декабрь":
+               numberMonth = "12";
+               break;
+            default:
+               numberMonth = "\"ошибка\"";
         }
         return numberMonth;
     }
@@ -182,13 +198,17 @@ public class ConditionalOperator {
         inputText = inputText.toLowerCase();
         String namesOfDays; 
         switch (inputText) {
-            case "en":  namesOfDays = "monday, tuesday, wednesday, thursday, friday, saturday, sunday.";
-                 break;
-            case "ru":  namesOfDays = "ПОНЕДЕЛЬНИК, ВТОРНИК, СРЕДА, ЧЕТВЕРГ, ПЯТНИЦА, СУББОТА, ВОСКРЕСЕНЬЕ.";
-                 break;
-            case "fr":  namesOfDays = "lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.";
-                 break;
-            default:  namesOfDays = "\"ошибка ввода\"";
+            case "en":
+              namesOfDays = "monday, tuesday, wednesday, thursday, friday, saturday, sunday.";
+              break;
+            case "ru":
+              namesOfDays = "ПОНЕДЕЛЬНИК, ВТОРНИК, СРЕДА, ЧЕТВЕРГ, ПЯТНИЦА, СУББОТА, ВОСКРЕСЕНЬЕ.";
+              break;
+            case "fr":
+              namesOfDays = "lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.";
+              break;
+            default:
+              namesOfDays = "\"ошибка ввода\"";
         }
         return namesOfDays;
     }
@@ -196,32 +216,44 @@ public class ConditionalOperator {
     public String detectCountOfDay(Integer number) {
         String countOfDay; 
         switch (number) {
-            case 1:  countOfDay = "31";
-                break;
-            case 2:  countOfDay = "28";
-                break;
-            case 3:  countOfDay = "31";
-                break;
-            case 4:  countOfDay = "30";
-                break;
-            case 5:  countOfDay = "31";
-                break;
-            case 6:  countOfDay = "30";
-                break;
-            case 7:  countOfDay = "31";
-                break;
-            case 8:  countOfDay = "31";
-                break;
-            case 9:  countOfDay = "30";
-                break;
-            case 10:  countOfDay = "31";
-                break;
-            case 11:  countOfDay = "30";
-                break;
-            case 12:  countOfDay = "31";
-                break;
+            case 1:
+              countOfDay = "31";
+              break;
+            case 2:
+              countOfDay = "28";
+              break;
+            case 3:
+              countOfDay = "31";
+              break;
+            case 4:
+              countOfDay = "30";
+              break;
+            case 5:
+              countOfDay = "31";
+              break;
+            case 6:
+              countOfDay = "30";
+              break;
+            case 7:
+              countOfDay = "31";
+              break;
+            case 8:
+              countOfDay = "31";
+              break;
+            case 9:
+              countOfDay = "30";
+              break;
+            case 10:
+              countOfDay = "31";
+              break;
+            case 11:
+              countOfDay = "30";
+              break;
+            case 12:
+              countOfDay = "31";
+              break;
             default:
-                countOfDay = "\"нет такого месяца\"";
+              countOfDay = "\"нет такого месяца\"";
         }
         return countOfDay;
     }
