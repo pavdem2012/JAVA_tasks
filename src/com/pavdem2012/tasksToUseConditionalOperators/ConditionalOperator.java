@@ -213,6 +213,11 @@ public class ConditionalOperator {
         return namesOfDays;
     }
 
+    /**
+     * По номеру месяца определить количество дней в месяце.
+     * @param number integer for proccesing
+     * @return number of days in a month
+     */
     public String detectCountOfDay(Integer number) {
         String countOfDay; 
         switch (number) {
@@ -257,13 +262,19 @@ public class ConditionalOperator {
         }
         return countOfDay;
     }
-    
+
+    /**
+     * Создать массив символов из строки. Размер массива должен автоматически рассчитываться.
+     * Вывести первый и последний элементы массива.
+     * @param inputText this is text for processing
+     * @return 
+     */
     public String countOfChars(String inputText) {
         char[]strToArray = inputText.toCharArray();
         char firstSymbol = strToArray[0];
         char lastSymbol = strToArray[strToArray.length - 1];
         int countOfchars = strToArray.length;
-        String countOfChars = "\nДлинна строки: " + countOfchars + "\n" + "Первый символ: " + firstSymbol + "\n" + "Последний символ:" + lastSymbol;
+        String countOfChars = "\n \nРазмер массива: " + countOfchars + " символов." + "\n" + "Первый символ: " + firstSymbol + "\n" + "Последний символ:" + lastSymbol;
         return countOfChars;
         
     }
