@@ -274,8 +274,22 @@ public class ConditionalOperator {
         char firstSymbol = strToArray[0];
         char lastSymbol = strToArray[strToArray.length - 1];
         int countOfchars = strToArray.length;
-        String countOfChars = "\n \nРазмер массива: " + countOfchars + " символов." + "\n" + "Первый символ: " + firstSymbol + "\n" + "Последний символ:" + lastSymbol;
+        String countOfChars = "\n \nРазмер массива: " + countOfchars + " символов." + "\n" 
+        + "Первый символ: " + firstSymbol +"." + "\n" + "Последний символ: " + lastSymbol + ".";
         return countOfChars;
         
+    }
+
+    /**
+     * Дана переменная n. Вывести факториал n.
+     * @param n int for proccesing
+     * @return factorial of number n
+     */
+    public int calculateFactorial(int n){
+        int result = 1;
+        for (int i = 1; i <=n; i ++){
+            result = result*i;
+        }
+        return result;
     }
 }

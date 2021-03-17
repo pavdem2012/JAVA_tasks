@@ -57,7 +57,11 @@ public class Main {
 
         //Создать массив символов из строки. Размер массива должен автоматически рассчитываться.
         //Вывести первый и последний элементы массива.
-        String text5 = "Лед встал господа";
+        String text5 = "Лед встал господа присяжные заседатели";
         System.out.println(conditionalOperator.countOfChars(text5));
+
+        //Дана переменная n. Вывести факториал n.
+        int n = 4;
+        System.out.println("\nФакториал числа n: " + conditionalOperator.calculateFactorial(n));
     }
 }
