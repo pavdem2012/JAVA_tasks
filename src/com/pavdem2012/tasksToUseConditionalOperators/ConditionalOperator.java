@@ -292,4 +292,16 @@ public class ConditionalOperator {
         }
         return result;
     }
+
+    /**.
+     * Даны две переменные: x, y. Вычислить x в степени y.
+     * @param x int for proccesing
+     * @param y int for proccesing
+     * @return x to the power of y
+     */
+    public int degreeCalculator(int x, int y) {
+        int j = 1;
+        for(int i=0;i<y;i++) j*=x;
+        return(j);
+    }
 }

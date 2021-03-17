@@ -63,5 +63,10 @@ public class Main {
         //Дана переменная n. Вывести факториал n.
         int n = 4;
         System.out.println("\nФакториал числа n: " + conditionalOperator.calculateFactorial(n));
+
+        //Даны две переменные: x, y. Вычислить x в степени y.
+        int x = 2;
+        int y = 4;
+        System.out.println("\nx^y = " + conditionalOperator.degreeCalculator(x , y));
     }
 }
