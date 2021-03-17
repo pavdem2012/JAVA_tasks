@@ -121,10 +121,10 @@ public class ConditionalOperator {
         if (stage1.contains("яблок") | stage1.contains("груш") | stage1.contains("апельсин")) {
             processedText = "Фрукты";
         }        
-        if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо")) {
+        else if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо")) {
             processedText = "Суповой набор";
         }
-        if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо") & stage1.contains("яблок") & stage1.contains("груш") & stage1.contains("апельсин")) {
+        else if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо") & stage1.contains("яблок") & stage1.contains("груш") & stage1.contains("апельсин")) {
             processedText = "Хватал всё подряд";
         }
         else {
@@ -256,5 +256,15 @@ public class ConditionalOperator {
               countOfDay = "\"нет такого месяца\"";
         }
         return countOfDay;
+    }
+    
+    public String countOfChars(String inputText) {
+        char[]strToArray = inputText.toCharArray();
+        char firstSymbol = strToArray[0];
+        char lastSymbol = strToArray[strToArray.length - 1];
+        int countOfchars = strToArray.length;
+        String countOfChars = "\nДлинна строки: " + countOfchars + "\n" + "Первый символ: " + firstSymbol + "\n" + "Последний символ:" + lastSymbol;
+        return countOfChars;
+        
     }
 }

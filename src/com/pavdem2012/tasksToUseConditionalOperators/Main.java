@@ -53,5 +53,10 @@ public class Main {
         //По номеру месяца определить количество дней в месяце.
         Integer month = 2;
         System.out.print("В месяце номер " + month + " дней: " + conditionalOperator.detectCountOfDay(month) + ".");
+
+        //Создать массив символов из строки. Размер массива должен автоматически рассчитываться.
+        //Вывести первый и последний элементы массива.
+        String text5 = "Лед встал господа";
+        System.out.println(conditionalOperator.countOfChars(text5));
     }
 }
