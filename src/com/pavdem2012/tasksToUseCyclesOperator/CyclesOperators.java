@@ -1,4 +1,4 @@
-package com.pavdem2012.tasksToUseConditionalOperators;
+package com.pavdem2012.tasksToUseCyclesOperator;
 
 public class CyclesOperators {
     /**

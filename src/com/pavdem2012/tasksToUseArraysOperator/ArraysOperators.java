@@ -1,4 +1,4 @@
-package com.pavdem2012.tasksToUseConditionalOperators;
+package com.pavdem2012.tasksToUseArraysOperator;
 
 public class ArraysOperators {
     /**
@@ -13,7 +13,7 @@ public class ArraysOperators {
         char firstSymbol = strToArray[0];
         char lastSymbol = strToArray[strToArray.length - 1];
         int countOfchars = strToArray.length;
-        String countOfChars = "\n \nРазмер массива: " + countOfchars + " символов." + "\n" + "Первый символ: "
+        String countOfChars = "Размер массива: " + countOfchars + " символов." + "\n" + "Первый символ: "
                 + firstSymbol + "." + "\n" + "Последний символ: " + lastSymbol + ".";
         return countOfChars;
 
