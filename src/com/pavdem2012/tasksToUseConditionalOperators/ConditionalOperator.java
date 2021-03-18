@@ -121,13 +121,15 @@ public class ConditionalOperator {
         if (stage1.contains("яблок") | stage1.contains("груш") | stage1.contains("апельсин")) {
             processedText = "Фрукты";
         }        
-        else if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо")) {
+        if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо")) {
             processedText = "Суповой набор";
         }
-        else if (stage1.contains("специи") & stage1.contains("овощи") & stage1.contains("мясо") & stage1.contains("яблок") & stage1.contains("груш") & stage1.contains("апельсин")) {
+        if ((stage1.contains("специи") | stage1.contains("овощи") | stage1.contains("мясо")) 
+                & (stage1.contains("яблок") | stage1.contains("груш") | stage1.contains("апельсин"))) {
             processedText = "Хватал всё подряд";
         }
-        else {
+        if (!stage1.contains("специи") & !stage1.contains("овощи") & !stage1.contains("мясо") 
+                & !stage1.contains("яблок") & !stage1.contains("груш") & !stage1.contains("апельсин")) {
             processedText = "В корзине нет нужных продуктов";
         }
         return processedText;
@@ -301,7 +303,9 @@ public class ConditionalOperator {
      */
     public int degreeCalculator(int x, int y) {
         int j = 1;
-        for(int i=0;i<y;i++) j*=x;
+        for(int i = 0; i < y; i ++) {
+            j*= x;
+        }
         return(j);
     }
 }
