@@ -27,11 +27,18 @@ public class Main {
 
         // По данному числу N вывести все целые степени двойки, не превосходящие N,
         // в порядке возрастания. Например: 1 2 4 8 16 32 для N=52
-        int N = 52;
+        int N = 64;
         System.out.println("\n" + "Целые степени двойки для N = " + N + ": " + cyclesOperators.integerPowersOfTwo(N));
 
         // Дано натуральное число N. Выведите слово YES, если число N является
         // точной степенью двойки, или слово NO в противном случае.
-        System.out.println("\n" + "Является ли N = " + N + " точной степенью для двойки: " + cyclesOperators.exactPowerOfTwo(N));
+        System.out.println(
+                "\n" + "Является ли N = " + N + " точной степенью для двойки: " + cyclesOperators.exactPowerOfTwo(N));
+
+        // Определите сумму всех элементов последовательности,
+        // завершающейся числом 0. Массив {3,2,3,5,0,7,5,4}
+        int[] intList = { 3, 2, 3, 5, 0, 7, 5, 4 };
+        System.out.println("\n" + "Сумма всех элементов последовательности,завершающейся числом 0 равна: "
+                + cyclesOperators.sumOfEelementsSequenceToZero(intList) + ";");
     }
 }

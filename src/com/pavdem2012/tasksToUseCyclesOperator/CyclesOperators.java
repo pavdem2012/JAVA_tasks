@@ -96,17 +96,43 @@ public class CyclesOperators {
         return outputText;
     }
 
+    /**
+     * Дано натуральное число N. Выведите слово YES, если число N является точной
+     * степенью двойки, или слово NO в противном случае.
+     * 
+     * @param N int for proccesing
+     * @returnthe word YES if the number N is an exact power of two, or the word NO
+     *            otherwise.
+     */
     public String exactPowerOfTwo(int N) {
         String outputText = "";
         int x = 1;
-        while (x < N)
+        while (x < N) {
             x = x * 2;
-        {
-            if (x == N) {
-                outputText = "YES";
-            } else
-                outputText = "NO";
+        }
+        if (x == N) {
+            outputText = "YES";
+        } else {
+            outputText = "NO";
         }
         return outputText;
+    }
+
+    /**
+     * Определите сумму всех элементов последовательности, завершающейся числом 0.
+     * Массив {3,2,3,5,0,7,5,4}
+     * 
+     * @param intList array for proccesing
+     * @return the sum of all elements of a zero-terminated sequence.
+     */
+    public int sumOfEelementsSequenceToZero(int[] intList) {
+        int sum = 0;
+        for (int counter = 0; counter < intList.length; counter++) {
+            if (intList[counter] == 0) {
+                break;
+            }
+            sum = sum + intList[counter];
+        }
+        return sum;
     }
 }
