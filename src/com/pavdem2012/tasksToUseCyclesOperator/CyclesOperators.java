@@ -45,4 +45,18 @@ public class CyclesOperators {
         }
         return processedText;
     }
+
+    /**
+     * Массив типа char выводить символы пока не встретится пробел.
+     * @param inputText text for processing.
+     * @return an array of characters up to the first space.
+     */
+    public String arrayToSpace(String inputText) {
+        String outputText = "";
+        char[] strToArray = inputText.toCharArray();
+        for (int i = 0; strToArray[i] != ' '; i++) {
+            outputText += strToArray[i];
+        }
+        return outputText;
+    }
 }

@@ -16,5 +16,10 @@ public class Main {
         // Вывести массив типа boolean в обратном порядке используя цикл со счётчиком.
         boolean[] array = { true, true, true, false, true, false };
         System.out.println("\nВ обратном порядке: " + cyclesOperators.reverseArray(array));
+
+        //Массив типа char выводить символы пока не встретится пробел.
+        String text = "Hello Wonderful World!";
+        System.out.println("\n" + cyclesOperators.arrayToSpace(text));
+        
     }
 }
