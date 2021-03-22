@@ -18,11 +18,17 @@ public class Main {
         System.out.println("\nВ обратном порядке: " + cyclesOperators.reverseArray(array));
 
         // Массив типа char выводить символы пока не встретится пробел.
-        String text = "Hello Wonderful World!";
-        System.out.println("\n" + cyclesOperators.arrayToSpace(text));
+        String text1 = "Hello Wonderful World!";
+        System.out.println("\n" + cyclesOperators.arrayToSpace(text1));
 
         // Альтернативное решение
-        String text1 = "Пытаюсь понять JAVA";
-        System.out.println("\n" + cyclesOperators.arrayToSpaceAlternative(text1));
+        String text2 = "Пытаюсь понять JAVA";
+        System.out.println("\n" + cyclesOperators.arrayToSpaceAlternative(text2));
+
+        //По данному числу N вывести все целые степени двойки, не превосходящие N,
+        //в порядке возрастания. Например: 1 2 4 8 16 32 для N=52
+        int N = 52;
+        System.out.println("\n" + "Целые степени двойки для N = " + N + ": " 
+        + cyclesOperators.integerPowersOfTwo(N) + ".");
     }
 }

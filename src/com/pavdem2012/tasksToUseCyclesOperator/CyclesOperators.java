@@ -78,4 +78,21 @@ public class CyclesOperators {
         }
         return outputText;
     }
+
+    /**
+     * По данному числу N вывести все целые степени двойки, не превосходящие N, в
+     * порядке возрастания. Например: 1 2 4 8 16 32 для N=52
+     * 
+     * @param N int for proccesing
+     * @return all integer powers of two not exceeding N
+     */
+    public String integerPowersOfTwo(int N) {
+        String outputText = "";
+        int x = 1;
+        while (x < N) {
+            outputText += x + " ";
+            x *= 2;
+        }
+        return outputText;
+    }
 }
