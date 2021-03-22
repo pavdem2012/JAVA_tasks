@@ -48,6 +48,7 @@ public class CyclesOperators {
 
     /**
      * Массив типа char выводить символы пока не встретится пробел.
+     * 
      * @param inputText text for processing.
      * @return an array of characters up to the first space.
      */
@@ -55,6 +56,23 @@ public class CyclesOperators {
         String outputText = "";
         char[] strToArray = inputText.toCharArray();
         for (int i = 0; strToArray[i] != ' '; i++) {
+            outputText += strToArray[i];
+        }
+        return outputText;
+    }
+
+    /**
+     * Альтернативное решение Массив типа char выводить символы пока не встретится
+     * пробел.
+     * 
+     * @param inputText text for processing.
+     * @return an array of characters up to the first space.
+     */
+    public String arrayToSpaceAlternative(String inputText) {
+        String outputText = "";
+        char[] strToArray = inputText.toCharArray();
+        int i = 0;
+        while (strToArray[i] != ' ') {
             outputText += strToArray[i];
         }
         return outputText;

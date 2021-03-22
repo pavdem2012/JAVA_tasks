@@ -17,9 +17,11 @@ public class Main {
         boolean[] array = { true, true, true, false, true, false };
         System.out.println("\nВ обратном порядке: " + cyclesOperators.reverseArray(array));
 
-        //Массив типа char выводить символы пока не встретится пробел.
-        String text = "Hello Wonderful World!";
+        // Массив типа char выводить символы пока не встретится пробел.
+        String text = "HelloWonderful World!";
         System.out.println("\n" + cyclesOperators.arrayToSpace(text));
-        
+
+        // Альтернативное решение
+        System.out.println("\n" + cyclesOperators.arrayToSpaceAlternative(text));
     }
 }
