@@ -95,4 +95,18 @@ public class CyclesOperators {
         }
         return outputText;
     }
+
+    public String exactPowerOfTwo(int N) {
+        String outputText = "";
+        int x = 1;
+        while (x < N)
+            x = x * 2;
+        {
+            if (x == N) {
+                outputText = "YES";
+            } else
+                outputText = "NO";
+        }
+        return outputText;
+    }
 }
