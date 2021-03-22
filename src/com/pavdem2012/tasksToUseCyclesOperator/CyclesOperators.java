@@ -90,7 +90,7 @@ public class CyclesOperators {
         String outputText = "";
         int x = 1;
         while (x < N) {
-            outputText += x + " ";
+            outputText += x + ";" + " ";
             x *= 2;
         }
         return outputText;

@@ -29,6 +29,6 @@ public class Main {
         //в порядке возрастания. Например: 1 2 4 8 16 32 для N=52
         int N = 52;
         System.out.println("\n" + "Целые степени двойки для N = " + N + ": " 
-        + cyclesOperators.integerPowersOfTwo(N) + ".");
+        + cyclesOperators.integerPowersOfTwo(N));
     }
 }
