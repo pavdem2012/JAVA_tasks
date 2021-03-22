@@ -33,12 +33,12 @@ public class ArraysOperators {
         int middleDigit = 0;
         String compareString = "";
         if (x == 1) {
-            middleDigit = arrayForProcessing[0 + f];
+            middleDigit = arrayForProcessing[f];
             compareString = "\n" + "Цифра из середины нечетного массива: " + middleDigit + '.';
         }
         if (x == 0) {
-            int firstDigit = arrayForProcessing[arrayForProcessing.length - f - 1];
-            int secondDigit = arrayForProcessing[arrayForProcessing.length - f];
+            int firstDigit = arrayForProcessing[f - 1];
+            int secondDigit = arrayForProcessing[f];
             compareString = "\n" + "Две цифры из середины четного массива: " + firstDigit + " и " + secondDigit + ".";
         }
         return compareString;
