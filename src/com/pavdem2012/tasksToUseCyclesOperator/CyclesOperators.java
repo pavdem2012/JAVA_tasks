@@ -10,8 +10,6 @@ public class CyclesOperators {
     public int calculateFactorial(int n) {
         int result = 1;
         for (int i = 1; i <= n; i++) {
-            if (i == 10)
-                continue;
             result = result * i;
         }
         return result;

@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         // Дана переменная n. Вывести факториал n.
-        int n = 0;
+        int n = 10;
         CyclesOperators cyclesOperators = new CyclesOperators();
-        System.out.println("Факториал числа n = " + cyclesOperators.calculateFactorial(n) + ".");
+        System.out.println("Факториал числа n = " + n + " = " + cyclesOperators.calculateFactorial(n) + ".");
 
         // Даны две переменные: x, y. Вычислить x в степени y.
         int x = 3;
