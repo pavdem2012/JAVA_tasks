@@ -74,6 +74,7 @@ public class CyclesOperators {
         int i = 0;
         while (strToArray[i] != ' ') {
             outputText += strToArray[i];
+            i++;
         }
         return outputText;
     }

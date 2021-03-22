@@ -18,10 +18,11 @@ public class Main {
         System.out.println("\nВ обратном порядке: " + cyclesOperators.reverseArray(array));
 
         // Массив типа char выводить символы пока не встретится пробел.
-        String text = "HelloWonderful World!";
+        String text = "Hello Wonderful World!";
         System.out.println("\n" + cyclesOperators.arrayToSpace(text));
 
         // Альтернативное решение
-        System.out.println("\n" + cyclesOperators.arrayToSpaceAlternative(text));
+        String text1 = "Пытаюсь понять JAVA";
+        System.out.println("\n" + cyclesOperators.arrayToSpaceAlternative(text1));
     }
 }
