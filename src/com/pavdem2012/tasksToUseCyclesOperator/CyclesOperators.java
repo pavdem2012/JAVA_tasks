@@ -81,7 +81,7 @@ public class CyclesOperators {
      * По данному числу N вывести все целые степени двойки, не превосходящие N, в
      * порядке возрастания. Например: 1 2 4 8 16 32 для N=52
      * 
-     * @param N int for proccesing
+     * @param N int for processing
      * @return all integer powers of two not exceeding N
      */
     public String integerPowersOfTwo(int N) {
@@ -98,7 +98,7 @@ public class CyclesOperators {
      * Дано натуральное число N. Выведите слово YES, если число N является точной
      * степенью двойки, или слово NO в противном случае.
      * 
-     * @param N int for proccesing
+     * @param N int for processing
      * @returnthe word YES if the number N is an exact power of two, or the word NO
      *            otherwise.
      */
@@ -120,7 +120,7 @@ public class CyclesOperators {
      * Определите сумму всех элементов последовательности, завершающейся числом 0.
      * Массив {3,2,3,5,0,7,5,4}
      * 
-     * @param intList array for proccesing
+     * @param intList array for processing
      * @return the sum of all elements of a zero-terminated sequence.
      */
     public int sumOfEelementsSequenceToZero(int[] intList) {
@@ -132,5 +132,31 @@ public class CyclesOperators {
             sum = sum + intList[counter];
         }
         return sum;
+    }
+
+    /**
+     * Последовательность состоит из натуральных чисел и завершается числом 0.
+     * Определите, какое количество элементов этой последовательности, равны ее
+     * наибольшему элементу. {3,5,1,5,2,3,5,0,7,5,4}
+     * 
+     * @param intList1 array for processing
+     * @return the number of largest elements of the sequence to zero
+     */
+    public int numberOfLargestElementsSequence(int[] intList1) {
+        int max = 0;
+        int numMax = 0;
+        int number = -1;
+        int counter = 0;
+        while (number != 0) {
+            number = intList1[counter];
+            counter++;
+            if (number > max) {
+                max = number;
+                numMax = 1;
+            } else if (number == max) {
+                numMax += 1;
+            }
+        }
+        return numMax;
     }
 }
