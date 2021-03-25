@@ -39,7 +39,7 @@ public class Main {
         // завершающейся числом 0. Массив {3,2,3,5,0,7,5,4}
         int[] intList = { 3, 2, 3, 5, 0, 7, 5, 4 };
         System.out.println("\n" + "Сумма всех элементов последовательности,завершающейся числом 0 равна: "
-                + cyclesOperators.sumOfEelementsSequenceToZero(intList) + ";");
+                + cyclesOperators.getMaxItemCount(intList) + ";");
 
         // Последовательность состоит из натуральных чисел и завершается числом 0.
         // Определите, какое количество элементов этой последовательности, равны ее
@@ -47,5 +47,8 @@ public class Main {
         int[] intList1 = { 3, 5, 1, 5, 2, 3, 5, 0, 7, 5, 4 };
         System.out.println("\n" + "Количество наибольших элементов последовательности, завершающейся нулём равно: "
                 + cyclesOperators.numberOfLargestElementsSequence(intList1) + ";");
+
+        //Вывести все элементы массива с четными индексами {3,5,1,5,2,3,5,0,7,5,4}
+        System.out.print("\n" + "Элементы массива с четным индексом: " + cyclesOperators.allElementsWithEvenIndex(intList1));
     }
 }

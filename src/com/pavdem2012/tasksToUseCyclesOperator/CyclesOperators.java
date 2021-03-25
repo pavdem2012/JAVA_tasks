@@ -123,7 +123,7 @@ public class CyclesOperators {
      * @param intList array for processing
      * @return the sum of all elements of a zero-terminated sequence.
      */
-    public int sumOfEelementsSequenceToZero(int[] intList) {
+    public int getMaxItemCount(int[] intList) {
         int sum = 0;
         for (int counter = 0; counter < intList.length; counter++) {
             if (intList[counter] == 0) {
@@ -158,5 +158,24 @@ public class CyclesOperators {
             }
         }
         return numMax;
+    }
+
+    /**
+     * Вывести все элементы массива с четными индексами {3,5,1,5,2,3,5,0,7,5,4}
+     * 
+     * @param intList1 array for processing
+     * @return all array elements with even indices
+     */
+
+    public String allElementsWithEvenIndex(int[] intList1) {
+        String processedText = "";
+        int evenIndex = 0;
+        for (int index = 0; index < intList1.length; index++) {
+            evenIndex = intList1[index];
+            if (index % 2 == 0) {
+                processedText += evenIndex + ";" + " ";
+            }
+        }
+        return processedText;
     }
 }
