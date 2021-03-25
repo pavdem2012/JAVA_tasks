@@ -178,4 +178,22 @@ public class CyclesOperators {
         }
         return processedText;
     }
+
+    /**
+     * Найти количество положительных элементов в данном массиве. {1,-2,3,-4,5}
+     * 
+     * @param intList2 array for processing
+     * @return the number of positive elements in the given array
+     */
+    public int numberOfPositiveElementsInArray(int[] intList2) {
+        int counter = 0;
+        int number = 0;
+        for (int i = 0; i < intList2.length; i++) {
+            number = intList2[i];
+            if (number > 0) {
+                counter ++;
+            }
+        }
+        return counter;
+    }
 }
