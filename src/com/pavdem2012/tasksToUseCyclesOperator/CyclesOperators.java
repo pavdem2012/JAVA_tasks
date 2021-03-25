@@ -179,6 +179,12 @@ public class CyclesOperators {
         return processedText;
     }
 
+    /**
+     * Вывести все четные элементы массива {3,5,1,5,2,3,5,0,7,5,4}.
+     * 
+     * @param intList1 array for processing
+     * @return all even elements of the array.
+     */
     public String allEvenElements(int[] intList1) {
         String processedText = "";
         int evenIndex = 0;
@@ -203,9 +209,30 @@ public class CyclesOperators {
         for (int i = 0; i < intList2.length; i++) {
             number = intList2[i];
             if (number > 0) {
-                counter ++;
+                counter++;
             }
         }
         return counter;
+    }
+
+    /**
+     * Дан массив чисел. Выведите все элементы массива, которые больше предыдущего
+     * элемента . {1,5,2,4,3}
+     * 
+     * @param intList3 array for processing
+     * @return array elements that are larger than the previous one
+     */
+    public String elementsAreLargerPreviousOne(int[] intList3) {
+        String processedText = "";
+        int index = 0;
+        int previousIndex = 0;
+        for (int i = 1; i < intList3.length; i++) {
+            index = intList3[i];
+            previousIndex = intList3[i-1];
+            if (index > previousIndex) {
+                processedText += index + ";" + " ";
+            }
+        }
+        return processedText;
     }
 }

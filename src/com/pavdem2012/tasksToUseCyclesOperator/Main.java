@@ -52,13 +52,17 @@ public class Main {
         System.out.print("\n" + "Элементы массива с четным индексом: "
                 + cyclesOperators.allElementsWithEvenIndex(intList1) + "\n");
 
-        //Вывести все четные элементы массива.
-        System.out.print("\n" + "Четные элементы массива: "
-                + cyclesOperators.allEvenElements(intList1) + "\n");
-        
+        // Вывести все четные элементы массива.
+        System.out.print("\n" + "Четные элементы массива: " + cyclesOperators.allEvenElements(intList1) + "\n");
+
         // Найти количество положительных элементов в данном массиве. {1,-2,3,-4,5}
-        int[] intList2 = {1, -2, 3, -4, 5 };
+        int[] intList2 = { 1, -2, 3, -4, 5 };
         System.out.println("\n" + "Kоличество положительных элементов в массиве: "
-                + cyclesOperators.numberOfPositiveElementsInArray(intList2) + ";" + "\n");
+                + cyclesOperators.numberOfPositiveElementsInArray(intList2) + ";");
+
+        // Дан массив чисел. Выведите все элементы массива, которые больше предыдущего
+        // элемента . {1,5,2,4,3}
+        int[] intList3 = {1,5,2,4,3};
+        System.out.print("\n" + "Элементы массива больше предыдущего: " + cyclesOperators.elementsAreLargerPreviousOne(intList3) + "\n");
     }
 }
