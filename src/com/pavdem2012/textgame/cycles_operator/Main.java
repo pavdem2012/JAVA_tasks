@@ -1,4 +1,4 @@
-package com.pavdem2012.tasksToUseCyclesOperator;
+package com.pavdem2012.textgame.cycles_operator;
 
 public class Main {
 
@@ -62,7 +62,8 @@ public class Main {
 
         // Дан массив чисел. Выведите все элементы массива, которые больше предыдущего
         // элемента . {1,5,2,4,3}
-        int[] intList3 = {1,5,2,4,3};
-        System.out.print("\n" + "Элементы массива больше предыдущего: " + cyclesOperators.elementsAreLargerPreviousOne(intList3) + "\n");
+        int[] intList3 = { 1, 5, 2, 4, 3 };
+        System.out.print("\n" + "Элементы массива больше предыдущего: "
+                + cyclesOperators.elementsAreLargerPreviousOne(intList3) + "\n");
     }
 }

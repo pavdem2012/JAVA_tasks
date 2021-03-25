@@ -1,4 +1,4 @@
-package com.pavdem2012.TextGames;
+package com.pavdem2012.textgame.textgames;
 
 public class TextGames {
 

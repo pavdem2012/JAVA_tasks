@@ -1,4 +1,4 @@
-package com.pavdem2012.tasksToUseCyclesOperator;
+package com.pavdem2012.textgame.cycles_operator;
 
 public class CyclesOperators {
     /**
@@ -228,7 +228,7 @@ public class CyclesOperators {
         int previousIndex = 0;
         for (int i = 1; i < intList3.length; i++) {
             index = intList3[i];
-            previousIndex = intList3[i-1];
+            previousIndex = intList3[i - 1];
             if (index > previousIndex) {
                 processedText += index + ";" + " ";
             }

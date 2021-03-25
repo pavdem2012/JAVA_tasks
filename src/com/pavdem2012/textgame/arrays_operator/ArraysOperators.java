@@ -1,4 +1,4 @@
-package com.pavdem2012.tasksToUseArraysOperator;
+package com.pavdem2012.textgame.arrays_operator;
 
 public class ArraysOperators {
     /**

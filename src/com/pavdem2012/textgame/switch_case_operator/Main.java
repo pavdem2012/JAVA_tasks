@@ -1,4 +1,4 @@
-package com.pavdem2012.tasksToUseSwitchCaseOperator;
+package com.pavdem2012.textgame.switch_case_operator;
 
 public class Main {
 
