@@ -179,6 +179,18 @@ public class CyclesOperators {
         return processedText;
     }
 
+    public String allEvenElements(int[] intList1) {
+        String processedText = "";
+        int evenIndex = 0;
+        for (int index = 0; index < intList1.length; index++) {
+            evenIndex = intList1[index];
+            if (evenIndex % 2 == 0) {
+                processedText += evenIndex + ";" + " ";
+            }
+        }
+        return processedText;
+    }
+
     /**
      * Найти количество положительных элементов в данном массиве. {1,-2,3,-4,5}
      * 
