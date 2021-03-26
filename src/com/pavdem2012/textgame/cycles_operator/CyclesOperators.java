@@ -235,4 +235,29 @@ public class CyclesOperators {
         }
         return processedText;
     }
+
+    /**
+     * Дан массив целых чисел. Если в нем есть два соседних элемента одного знака,
+     * выведите эти числа. Если соседних элементов одного знака нет - не выводите
+     * ничего. Если таких пар соседей несколько - выведите первую пару.
+     * {-1,2,3,-1,-2}
+     * 
+     * @param intList4 array for processing
+     * @return two adjacent elements of the same sign
+     */
+    public String twoAdjacentElements(int[] intList4) {
+        String processedText = "";
+        int previousNumber = 0;
+        int number = 0;        
+        for (int i = 1; i < intList4.length; i++) {
+            previousNumber = intList4[i - 1];
+            number = intList4[i];            
+            if (previousNumber > 0 & number > 0 | previousNumber < 0 & number < 0) {
+                processedText = "\n" + "Соседние элементы одного знака: " + previousNumber + ";" + " " + number + ";"
+                        + " " + "\n";
+                break;
+            }
+        }
+        return processedText;
+    }
 }

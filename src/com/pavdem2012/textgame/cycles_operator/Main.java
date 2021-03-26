@@ -65,5 +65,12 @@ public class Main {
         int[] intList3 = { 1, 5, 2, 4, 3 };
         System.out.print("\n" + "Элементы массива больше предыдущего: "
                 + cyclesOperators.elementsAreLargerPreviousOne(intList3) + "\n");
+
+        // Дан массив целых чисел. Если в нем есть два соседних элемента одного знака,
+        // выведите эти числа. Если соседних элементов одного знака нет - не выводите
+        // ничего. Если таких пар соседей несколько - выведите первую пару.
+        // {-1,2,3,-1,-2}
+        int[] intList4 = {-1,2,3,-1,-2};
+        System.out.print(cyclesOperators.twoAdjacentElements(intList4));
     }
 }
