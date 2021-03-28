@@ -262,6 +262,28 @@ public class CyclesOperators {
     }
 
     /**
+     * Дан массив. Создать новый массив и наполнить его данным массивом, но в
+     * обратном порядке. Вывести новый массив на экран. { 3, 5, 1, 5, 2, 3, 5, 0, 7, 5, 4 }
+     * 
+     * @param intList1 array for processing
+     * @return array in reverse order
+     */
+    public String arrayToNewReverseArray(int[] intList1) {
+        String processedText = "";
+        int n = intList1.length;
+        int temporary;
+        for (int i = 0; i < n / 2; i++) {
+            temporary = intList1[n - i - 1];
+            intList1[n - i - 1] = intList1[i];
+            intList1[i] = temporary;
+        }
+        for (int i = 0; i < intList1.length; i++) {
+            processedText += intList1[i] + "; ";
+        }
+        return processedText;
+    }
+
+    /**
      * Выведите значение наименьшего из всех положительных элементов в массиве.
      * Известно, что в массиве есть хотя бы один положительный элемент.
      * {5,-4,3,-2,1}
