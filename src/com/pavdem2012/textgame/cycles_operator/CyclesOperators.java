@@ -265,6 +265,9 @@ public class CyclesOperators {
      * Выведите значение наименьшего из всех положительных элементов в массиве.
      * Известно, что в массиве есть хотя бы один положительный элемент.
      * {5,-4,3,-2,1}
+     * 
+     * @param intList5 array for processing
+     * @return smallest of all positive elements in the array
      */
     public String smallestOfPositiveElements(int[] intList5) {
         String processedText = "";
