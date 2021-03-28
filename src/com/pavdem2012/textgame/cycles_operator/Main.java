@@ -70,7 +70,13 @@ public class Main {
         // выведите эти числа. Если соседних элементов одного знака нет - не выводите
         // ничего. Если таких пар соседей несколько - выведите первую пару.
         // {-1,2,3,-1,-2}
-        int[] intList4 = {-1,2,3,-1,-2};
+        int[] intList4 = { -1, 2, 3, -1, -2 };
         System.out.print(cyclesOperators.twoAdjacentElements(intList4));
+
+        // Выведите значение наименьшего из всех положительных элементов в массиве.
+        // Известно, что в массиве есть хотя бы один положительный элемент.
+        // {5,-4,3,-2,1}
+        int[ ] intlist5 = {5,-4,3,-2,1};
+        System.out.println(cyclesOperators.smallestOfPositiveElements(intlist5));
     }
 }

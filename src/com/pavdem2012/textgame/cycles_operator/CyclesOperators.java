@@ -248,15 +248,38 @@ public class CyclesOperators {
     public String twoAdjacentElements(int[] intList4) {
         String processedText = "";
         int previousNumber = 0;
-        int number = 0;        
+        int number = 0;
         for (int i = 1; i < intList4.length; i++) {
             previousNumber = intList4[i - 1];
-            number = intList4[i];            
+            number = intList4[i];
             if (previousNumber > 0 & number > 0 | previousNumber < 0 & number < 0) {
                 processedText = "\n" + "Соседние элементы одного знака: " + previousNumber + ";" + " " + number + ";"
                         + " " + "\n";
                 break;
             }
+        }
+        return processedText;
+    }
+
+    /**
+     * Выведите значение наименьшего из всех положительных элементов в массиве.
+     * Известно, что в массиве есть хотя бы один положительный элемент.
+     * {5,-4,3,-2,1}
+     */
+    public String smallestOfPositiveElements(int[] intList5) {
+        String processedText = "";
+        int min = 0;
+        // int numMin = 0;
+        int number = 0;
+        for (int i = 0; i < intList5.length; i++) {
+            number = intList5[i];
+            if (number > 0) {
+                min = number;
+            }
+            if (min < intList5[i]) {
+                min = number;
+            }
+            processedText = "\n" + "Наименьший из положительных элементов: " + min + ";" + "\n";
         }
         return processedText;
     }
