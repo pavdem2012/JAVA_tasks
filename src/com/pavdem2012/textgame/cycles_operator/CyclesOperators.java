@@ -272,7 +272,6 @@ public class CyclesOperators {
     public String smallestOfPositiveElements(int[] intList5) {
         String processedText = "";
         int min = 0;
-        // int numMin = 0;
         int number = 0;
         for (int i = 0; i < intList5.length; i++) {
             number = intList5[i];
