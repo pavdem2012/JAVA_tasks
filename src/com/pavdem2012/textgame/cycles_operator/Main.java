@@ -82,5 +82,10 @@ public class Main {
         // {5,-4,3,-2,1}
         int[ ] intlist5 = {5,-4,3,-2,1};
         System.out.println(cyclesOperators.smallestOfPositiveElements(intlist5));
+
+        // Выведите значение наименьшего нечетного элемента списка, а если в списке нет
+        // нечетных элементов - выведите число 0 {0,1,2,3,4} -> 1 {2,4,6,8,10} -> 0
+        int[] intList6 = {0,1,2,3,4};
+        System.out.println(cyclesOperators.smallestOddElementList(intList6));
     }
 }

@@ -120,16 +120,16 @@ public class CyclesOperators {
      * Определите сумму всех элементов последовательности, завершающейся числом 0.
      * Массив {3,2,3,5,0,7,5,4}
      * 
-     * @param intList array for processing
+     * @param numberArray array for processing
      * @return the sum of all elements of a zero-terminated sequence.
      */
-    public int getMaxItemCount(int[] intList) {
+    public int getMaxItemCount(int[] numberArray) {
         int sum = 0;
-        for (int counter = 0; counter < intList.length; counter++) {
-            if (intList[counter] == 0) {
+        for (int counter = 0; counter < numberArray.length; counter++) {
+            if (numberArray[counter] == 0) {
                 break;
             }
-            sum = sum + intList[counter];
+            sum = sum + numberArray[counter];
         }
         return sum;
     }
@@ -139,16 +139,16 @@ public class CyclesOperators {
      * Определите, какое количество элементов этой последовательности, равны ее
      * наибольшему элементу. {3,5,1,5,2,3,5,0,7,5,4}
      * 
-     * @param intList1 array for processing
+     * @param numberArray array for processing
      * @return the number of largest elements of the sequence to zero
      */
-    public int numberOfLargestElementsSequence(int[] intList1) {
+    public int numberOfLargestElementsSequence(int[] numberArray) {
         int max = 0;
         int numMax = 0;
         int number = -1;
         int counter = 0;
         while (number != 0) {
-            number = intList1[counter];
+            number = numberArray[counter];
             counter++;
             if (number > max) {
                 max = number;
@@ -163,15 +163,15 @@ public class CyclesOperators {
     /**
      * Вывести все элементы массива с четными индексами {3,5,1,5,2,3,5,0,7,5,4}
      * 
-     * @param intList1 array for processing
+     * @param numberArray array for processing
      * @return all array elements with even indices
      */
 
-    public String allElementsWithEvenIndex(int[] intList1) {
+    public String allElementsWithEvenIndex(int[] numberArray) {
         String processedText = "";
         int evenIndex = 0;
-        for (int index = 0; index < intList1.length; index++) {
-            evenIndex = intList1[index];
+        for (int index = 0; index < numberArray.length; index++) {
+            evenIndex = numberArray[index];
             if (index % 2 == 0) {
                 processedText += evenIndex + ";" + " ";
             }
@@ -182,14 +182,14 @@ public class CyclesOperators {
     /**
      * Вывести все четные элементы массива {3,5,1,5,2,3,5,0,7,5,4}.
      * 
-     * @param intList1 array for processing
+     * @param numberArray array for processing
      * @return all even elements of the array.
      */
-    public String allEvenElements(int[] intList1) {
+    public String allEvenElements(int[] numberArray) {
         String processedText = "";
         int evenIndex = 0;
-        for (int index = 0; index < intList1.length; index++) {
-            evenIndex = intList1[index];
+        for (int index = 0; index < numberArray.length; index++) {
+            evenIndex = numberArray[index];
             if (evenIndex % 2 == 0) {
                 processedText += evenIndex + ";" + " ";
             }
@@ -200,14 +200,14 @@ public class CyclesOperators {
     /**
      * Найти количество положительных элементов в данном массиве. {1,-2,3,-4,5}
      * 
-     * @param intList2 array for processing
+     * @param numberArray array for processing
      * @return the number of positive elements in the given array
      */
-    public int numberOfPositiveElementsInArray(int[] intList2) {
+    public int numberOfPositiveElementsInArray(int[] numberArray) {
         int counter = 0;
         int number = 0;
-        for (int i = 0; i < intList2.length; i++) {
-            number = intList2[i];
+        for (int i = 0; i < numberArray.length; i++) {
+            number = numberArray[i];
             if (number > 0) {
                 counter++;
             }
@@ -219,18 +219,18 @@ public class CyclesOperators {
      * Дан массив чисел. Выведите все элементы массива, которые больше предыдущего
      * элемента . {1,5,2,4,3}
      * 
-     * @param intList3 array for processing
+     * @param numberArray array for processing
      * @return array elements that are larger than the previous one
      */
-    public String elementsAreLargerPreviousOne(int[] intList3) {
+    public String elementsAreLargerPreviousOne(int[] numberArray) {
         String processedText = "";
-        int index = 0;
-        int previousIndex = 0;
-        for (int i = 1; i < intList3.length; i++) {
-            index = intList3[i];
-            previousIndex = intList3[i - 1];
-            if (index > previousIndex) {
-                processedText += index + ";" + " ";
+        int number = 0;
+        int previousNumber = 0;
+        for (int i = 1; i < numberArray.length; i++) {
+            number = numberArray[i];
+            previousNumber = numberArray[i - 1];
+            if (number > previousNumber) {
+                processedText += number + "; ";
             }
         }
         return processedText;
@@ -245,16 +245,15 @@ public class CyclesOperators {
      * @param intList4 array for processing
      * @return two adjacent elements of the same sign
      */
-    public String twoAdjacentElements(int[] intList4) {
+    public String twoAdjacentElements(int[] numberArray) {
         String processedText = "";
         int previousNumber = 0;
         int number = 0;
-        for (int i = 1; i < intList4.length; i++) {
-            previousNumber = intList4[i - 1];
-            number = intList4[i];
+        for (int i = 1; i < numberArray.length; i++) {
+            previousNumber = numberArray[i - 1];
+            number = numberArray[i];
             if (previousNumber > 0 & number > 0 | previousNumber < 0 & number < 0) {
-                processedText = "\n" + "Соседние элементы одного знака: " + previousNumber + ";" + " " + number + ";"
-                        + " " + "\n";
+                processedText = "\nСоседние элементы одного знака: " + previousNumber + "; " + number + "; \n";
                 break;
             }
         }
@@ -262,23 +261,20 @@ public class CyclesOperators {
     }
 
     /**
-     * Дан массив. Создать новый массив и наполнить его данным массивом, но в
-     * обратном порядке. Вывести новый массив на экран. { 3, 5, 1, 5, 2, 3, 5, 0, 7, 5, 4 }
+     * Дан массив. { 3, 5, 1, 5, 2, 3, 5, 0, 7, 5, 4 } Создать новый массив и
+     * наполнить его данным массивом, но в обратном порядке. Вывести новый массив на
+     * экран.
      * 
-     * @param intList1 array for processing
+     * @param numberArray array for processing
      * @return array in reverse order
      */
-    public String arrayToNewReverseArray(int[] intList1) {
+    public String arrayToNewReverseArray(int[] numberArray) {
         String processedText = "";
-        int n = intList1.length;
-        int temporary;
-        for (int i = 0; i < n / 2; i++) {
-            temporary = intList1[n - i - 1];
-            intList1[n - i - 1] = intList1[i];
-            intList1[i] = temporary;
-        }
-        for (int i = 0; i < intList1.length; i++) {
-            processedText += intList1[i] + "; ";
+        int length = numberArray.length;
+        int[] temporary = new int[length];
+        for (int i = 0; i < length; i++) {
+            temporary[i] = numberArray[length - i - 1];
+            processedText += temporary[i] + "; ";
         }
         return processedText;
     }
@@ -288,22 +284,39 @@ public class CyclesOperators {
      * Известно, что в массиве есть хотя бы один положительный элемент.
      * {5,-4,3,-2,1}
      * 
-     * @param intList5 array for processing
+     * @param numberArray array for processing
      * @return smallest of all positive elements in the array
      */
-    public String smallestOfPositiveElements(int[] intList5) {
+    public String smallestOfPositiveElements(int[] numberArray) {
         String processedText = "";
-        int min = 0;
+        int min = numberArray[0];
         int number = 0;
-        for (int i = 0; i < intList5.length; i++) {
-            number = intList5[i];
-            if (number > 0) {
+        for (int i = 0; i < numberArray.length; i++) {
+            number = numberArray[i];
+            if (number > 0 & numberArray[i] < min) {
                 min = number;
+                processedText = "\nНаименьший из положительных элементов: " + min + ";\n";
             }
-            if (min < intList5[i]) {
+        }
+        return processedText;
+    }
+
+    /**
+     * Выведите значение наименьшего нечетного элемента списка, а если в списке нет
+     * нечетных элементов - выведите число 0 {0,1,2,3,4} -> 1 {2,4,6,8,10} -> 0
+     */
+    public String smallestOddElementList(int[] numberArray) {
+        String processedText = "";
+        int min = numberArray[0];
+        int number = 0;
+        for (int i = 0; i < numberArray.length; i++) {
+            number = numberArray[i];
+            if (number % 2 != 0 & numberArray[i] < min) {
                 min = number;
+                System.out.println(min);
+                processedText = "наименьший нечетный элемент списка: " + min + "; ";
             }
-            processedText = "\n" + "Наименьший из положительных элементов: " + min + ";" + "\n";
+
         }
         return processedText;
     }
