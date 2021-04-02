@@ -307,16 +307,18 @@ public class CyclesOperators {
      */
     public String smallestOddElementList(int[] numberArray) {
         String processedText = "";
-        int min = numberArray[0];
+        int n = numberArray.length;
+        int min = numberArray[n - 1];
         int number = 0;
         for (int i = 0; i < numberArray.length; i++) {
             number = numberArray[i];
             if (number % 2 != 0 & numberArray[i] < min) {
                 min = number;
-                System.out.println(min);
-                processedText = "наименьший нечетный элемент списка: " + min + "; ";
+                processedText = "Hаименьший нечетный элемент списка: " + min + "; ";
+                break;
+            } else if (number % 2 == 0) {
+                processedText = "0";
             }
-
         }
         return processedText;
     }
