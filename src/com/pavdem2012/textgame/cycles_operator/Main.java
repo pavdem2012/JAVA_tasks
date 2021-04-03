@@ -91,7 +91,7 @@ public class Main {
 
         // Дан список, упорядоченный по возрастанию элементов в нем. Определите, сколько
         // в нем различных элементов. {1,2,2,3,3,3} -> 3
-        int[] intList7 = { 1, 2, 2, 3, 3, 3 ,5 ,0};
+        int[] intList7 = {1,2,2,3,3,3};
         System.out.println(
                 "\nКоличество различных элементов: " + cyclesOperators.numberOfDifferentElements(intList7) + ";");
 

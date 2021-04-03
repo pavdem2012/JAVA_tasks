@@ -334,15 +334,19 @@ public class CyclesOperators {
      * @return number of different elements
      */
     public int numberOfDifferentElements(int[] numberArray) {
-        int numberOfDifferentElements = 0;
-        for (int i = 0; i < numberArray.length; i++) {
-            int count = 0;
-            for (int j = 0; j < i; j++) {
-                if (numberArray[j] == numberArray[i]) {
-                    count++;
-                }
-            }
-            if (count == 0) {
+        int numberOfDifferentElements = 1;
+        int number = 0;
+        int previousNumber = 0;
+        if (numberArray.length == 0) {
+            numberOfDifferentElements = 0;
+        }
+        if (numberArray.length == 1) {
+            numberOfDifferentElements = 1;
+        }
+        for (int i = 1; i < numberArray.length; i++) {
+            number = numberArray[i];
+            previousNumber = numberArray[i - 1];
+            if (number > previousNumber) {
                 numberOfDifferentElements++;
             }
         }
