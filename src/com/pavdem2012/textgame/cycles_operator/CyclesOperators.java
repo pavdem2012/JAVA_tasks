@@ -330,7 +330,7 @@ public class CyclesOperators {
      * Дан список, упорядоченный по возрастанию элементов в нем. Определите, сколько
      * в нем различных элементов. {1,2,2,3,3,3} -> 3
      * 
-     * @param numberArray numberArray array for processing
+     * @param numberArray array for processing
      * @return number of different elements
      */
     public int numberOfDifferentElements(int[] numberArray) {
@@ -347,5 +347,45 @@ public class CyclesOperators {
             }
         }
         return numberOfDifferentElements;
+    }
+
+    /**
+     * Переставьте соседние элементы массива (A[0] c A[1], A[2] c A[3] и т.д.). Если
+     * элементов нечетное число, то последний элемент остается на своем месте.
+     * {1,-2,3,-4,5}, {1,-2,3,-4,5,7}
+     * 
+     * @param numberArray array for processing
+     * @return Rearrange adjacent array elements
+     */
+    public String rearrangeAdjacentArrayElements(int[] numberArray) {
+        String processedText = "";
+        for (int i = 1; i < numberArray.length; i += 2) {
+            int cache = numberArray[i];
+            numberArray[i] = numberArray[i - 1];
+            numberArray[i - 1] = cache;
+        }
+        for (int i = 0; i < numberArray.length; i++) {
+            processedText += numberArray[i] + "; ";
+        }
+        return processedText;
+    }
+
+    // Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
+    // Считается, что любые два элемента, равные друг другу образуют одну пару,
+    // которую необходимо посчитать. {1,2,3,2,3} -> 2
+    public int pairsElementsEqualToEachOther(int[] numberArray) {
+        int countOfPairs = 0;
+        for (int i = 1; i < numberArray.length; i++) {
+            int count = 0;
+            for (int j = 0; j < i; j++) {
+                if (numberArray[j] == numberArray[i]) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                countOfPairs++;
+            }
+        }
+        return countOfPairs;
     }
 }

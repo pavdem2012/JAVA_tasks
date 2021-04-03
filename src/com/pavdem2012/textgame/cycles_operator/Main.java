@@ -91,7 +91,26 @@ public class Main {
 
         // Дан список, упорядоченный по возрастанию элементов в нем. Определите, сколько
         // в нем различных элементов. {1,2,2,3,3,3} -> 3
-        int[] intList7 = {1,2,2,3,3,3};
-        System.out.println("\nКоличество различных элементов: " + cyclesOperators.numberOfDifferentElements(intList7) + ";");
+        int[] intList7 = { 1, 2, 2, 3, 3, 3 ,5 ,0};
+        System.out.println(
+                "\nКоличество различных элементов: " + cyclesOperators.numberOfDifferentElements(intList7) + ";");
+
+        // Переставьте соседние элементы массива (A[0] c A[1], A[2] c A[3] и т.д.). Если
+        // элементов нечетное число, то последний элемент остается на своем месте.
+        // {1,-2,3,-4,5}, {1,-2,3,-4,5,7}
+        int[] intList8 = { 1, -2, 3, -4, 5, };
+        String outputText = "";
+        for (int i = 0; i < intList8.length; i++) {
+            outputText += intList8[i] + "; ";
+        }
+        System.out.println("\nИзначальный массив: " + outputText + "\nМассив с переставленными парами: "
+                + cyclesOperators.rearrangeAdjacentArrayElements(intList8));
+
+        // Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
+        // Считается, что любые два элемента, равные друг другу образуют одну пару,
+        // которую необходимо посчитать. {1,2,3,2,3} -> 2
+        int[] intList10 = { 1, 2, 3, 2, 3 };
+        System.out.println("\nКоличество пар элементов равных друг другу: "
+                + cyclesOperators.pairsElementsEqualToEachOther(intList10));
     }
 }
