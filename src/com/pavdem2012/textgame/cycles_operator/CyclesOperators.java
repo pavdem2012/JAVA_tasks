@@ -304,22 +304,48 @@ public class CyclesOperators {
     /**
      * Выведите значение наименьшего нечетного элемента списка, а если в списке нет
      * нечетных элементов - выведите число 0 {0,1,2,3,4} -> 1 {2,4,6,8,10} -> 0
+     * 
+     * @param numberArray array for processing
+     * @return the value of the smallest odd element of the list
      */
-    public String smallestOddElementList(int[] numberArray) {
-        String processedText = "";
+    public int smallestOddElementList(int[] numberArray) {
+        int smallestOddElementList = 0;
         int n = numberArray.length;
         int min = numberArray[n - 1];
         int number = 0;
         for (int i = 0; i < numberArray.length; i++) {
             number = numberArray[i];
-            if (number % 2 != 0 & numberArray[i] < min) {
+            if (number != 0 & number % 2 != 0 & numberArray[i] < min) {
                 min = number;
-                processedText = "Hаименьший нечетный элемент списка: " + min + "; ";
+                smallestOddElementList = min;
                 break;
-            } else if (number % 2 == 0) {
-                processedText = "0";
+            } else {
+                smallestOddElementList = 0;
             }
         }
-        return processedText;
+        return smallestOddElementList;
+    }
+
+    /**
+     * Дан список, упорядоченный по возрастанию элементов в нем. Определите, сколько
+     * в нем различных элементов. {1,2,2,3,3,3} -> 3
+     * 
+     * @param numberArray numberArray array for processing
+     * @return number of different elements
+     */
+    public int numberOfDifferentElements(int[] numberArray) {
+        int numberOfDifferentElements = 0;
+        for (int i = 0; i < numberArray.length; i++) {
+            int count = 0;
+            for (int j = 0; j < i; j++) {
+                if (numberArray[j] == numberArray[i]) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                numberOfDifferentElements++;
+            }
+        }
+        return numberOfDifferentElements;
     }
 }
