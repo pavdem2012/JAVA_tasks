@@ -374,6 +374,22 @@ public class CyclesOperators {
         return processedText;
     }
 
+    // Циклически сдвиньте элементы списка вправо (A[0] переходит на место A[1],
+    // A[1] на место A[2], последний элемент переходит на место A[0]).
+    // {1,-2,3,-4,5}
+    public String cyclicalRightShift(int[] numberArray) {
+        String processedText = "";
+        for (int i = 1; i < numberArray.length; i++) {
+            int cache = numberArray[i];
+            numberArray[i] = numberArray[i - 1];
+            numberArray[i - 1] = cache;
+        }
+        for (int i = 0; i < numberArray.length; i++) {
+            processedText += numberArray[i] + "; ";
+        }
+        return processedText;
+    }
+
     /**
      * Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
      * Считается, что любые два элемента, равные друг другу образуют одну пару,
@@ -401,18 +417,22 @@ public class CyclesOperators {
         return countOfPairs;
     }
 
-    // Дан массив. Выведите те его элементы, которые встречаются в массиве только
-    // один раз. Элементы нужно выводить в том порядке, в котором они встречаются в
-    // списке. {4,3,5,2,5,1,3,5} -> 4 2 1
+    /**
+     * Дан массив. Выведите те его элементы, которые встречаются в массиве только
+     * один раз. Элементы нужно выводить в том порядке, в котором они встречаются в
+     * списке. {4,3,5,2,5,1,3,5} -> 4 2 1
+     * 
+     * @param numberArray numberArray array for processing
+     * @return array elements that occur only once, in the order they appear in the
+     *         list
+     */
     public String uniqueArrayElements(int[] numberArray) {
         String uniqueArrayElements = "";
-        for (int i = 0; i < numberArray.length; i++)
-        {
+        for (int i = 0; i < numberArray.length; i++) {
             int count = 0;
             for (int j = 0; j < numberArray.length; j++)
                 if (numberArray[i] == numberArray[j])
                     count++;
-
             if (count == 1)
                 uniqueArrayElements += numberArray[i] + "; ";
         }

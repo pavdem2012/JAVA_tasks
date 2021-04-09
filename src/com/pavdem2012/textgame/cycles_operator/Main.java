@@ -106,6 +106,17 @@ public class Main {
         System.out.println("\nИзначальный массив: " + outputText + "\nМассив с переставленными парами: "
                 + cyclesOperators.rearrangeAdjacentArrayElements(intList8));
 
+        // Циклически сдвиньте элементы списка вправо (A[0] переходит на место A[1],
+        // A[1] на место A[2], ..., последний элемент переходит на место A[0]).
+        // {1,-2,3,-4,5}
+        int[] intList9 = { 1, -2, 3, -4, 5 };
+        String otherOutputText = "";
+        for (int i = 0; i < intList9.length; i++) {
+            otherOutputText += intList9[i] + "; ";
+        }
+        System.out.println("\nИзначальный массив: " + otherOutputText + "\nСдвинутый  массив: "
+                + cyclesOperators.cyclicalRightShift(intList9));
+
         // Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
         // Считается, что любые два элемента, равные друг другу образуют одну пару,
         // которую необходимо посчитать. {1,2,3,2,3} -> 2
