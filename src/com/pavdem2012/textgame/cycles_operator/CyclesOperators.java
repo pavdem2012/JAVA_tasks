@@ -374,14 +374,14 @@ public class CyclesOperators {
         return processedText;
     }
 
-/**
- * Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
- * Считается, что любые два элемента, равные друг другу образуют одну пару,
- * которую необходимо посчитать. {1,2,3,2,3} -> 2
- * 
- * @param numberArray array for processing
- * @return the number of pairs of elements equal to each other
- */
+    /**
+     * Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
+     * Считается, что любые два элемента, равные друг другу образуют одну пару,
+     * которую необходимо посчитать. {1,2,3,2,3} -> 2
+     * 
+     * @param numberArray array for processing
+     * @return the number of pairs of elements equal to each other
+     */
     public int pairsElementsEqualToEachOther(int[] numberArray) {
         Arrays.sort(numberArray);
         int countOfPairs = 0;
@@ -399,5 +399,23 @@ public class CyclesOperators {
             }
         }
         return countOfPairs;
+    }
+
+    // Дан массив. Выведите те его элементы, которые встречаются в массиве только
+    // один раз. Элементы нужно выводить в том порядке, в котором они встречаются в
+    // списке. {4,3,5,2,5,1,3,5} -> 4 2 1
+    public String uniqueArrayElements(int[] numberArray) {
+        String uniqueArrayElements = "";
+        for (int i = 0; i < numberArray.length; i++)
+        {
+            int count = 0;
+            for (int j = 0; j < numberArray.length; j++)
+                if (numberArray[i] == numberArray[j])
+                    count++;
+
+            if (count == 1)
+                uniqueArrayElements += numberArray[i] + "; ";
+        }
+        return uniqueArrayElements;
     }
 }

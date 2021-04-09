@@ -91,7 +91,7 @@ public class Main {
 
         // Дан список, упорядоченный по возрастанию элементов в нем. Определите, сколько
         // в нем различных элементов. {1,2,2,3,3,3} -> 3
-        int[] intList7 = {1};
+        int[] intList7 = { 1 };
         System.out.println(
                 "\nКоличество различных элементов: " + cyclesOperators.numberOfDifferentElements(intList7) + ";");
 
@@ -112,5 +112,12 @@ public class Main {
         int[] intList10 = { 1, 2, 3, 2, 3 };
         System.out.println("\nКоличество пар элементов равных друг другу: "
                 + cyclesOperators.pairsElementsEqualToEachOther(intList10));
+
+        // Дан массив. Выведите те его элементы, которые встречаются в массиве только
+        // один раз. Элементы нужно выводить в том порядке, в котором они встречаются в
+        // списке. {4,3,5,2,5,1,3,5} -> 4 2 1
+        int[] intList11 = { 4, 3, 5, 2, 5, 1, 3, 5 };
+        System.out.println("\nЭлементы, встречающиеся в массиве только один раз: "
+                + cyclesOperators.uniqueArrayElements(intList11));
     }
 }
