@@ -1,5 +1,7 @@
 package com.pavdem2012.textgame.cycles_operator;
 
+import java.util.Arrays;
+
 public class CyclesOperators {
     /**
      * Дана переменная n. Вывести факториал n.
@@ -339,9 +341,7 @@ public class CyclesOperators {
         int previousNumber = 0;
         if (numberArray.length == 0) {
             numberOfDifferentElements = 0;
-        }
-        if (numberArray.length == 1) {
-            numberOfDifferentElements = 1;
+            return numberOfDifferentElements;
         }
         for (int i = 1; i < numberArray.length; i++) {
             number = numberArray[i];
@@ -374,19 +374,27 @@ public class CyclesOperators {
         return processedText;
     }
 
-    // Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
-    // Считается, что любые два элемента, равные друг другу образуют одну пару,
-    // которую необходимо посчитать. {1,2,3,2,3} -> 2
+/**
+ * Дан массив чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
+ * Считается, что любые два элемента, равные друг другу образуют одну пару,
+ * которую необходимо посчитать. {1,2,3,2,3} -> 2
+ * 
+ * @param numberArray array for processing
+ * @return the number of pairs of elements equal to each other
+ */
     public int pairsElementsEqualToEachOther(int[] numberArray) {
+        Arrays.sort(numberArray);
         int countOfPairs = 0;
+        int number = 0;
+        int previousNumber = 0;
+        if (numberArray.length < 2) {
+            countOfPairs = 0;
+            return countOfPairs;
+        }
         for (int i = 1; i < numberArray.length; i++) {
-            int count = 0;
-            for (int j = 0; j < i; j++) {
-                if (numberArray[j] == numberArray[i]) {
-                    count++;
-                }
-            }
-            if (count == 0) {
+            number = numberArray[i];
+            previousNumber = numberArray[i - 1];
+            if (number == previousNumber) {
                 countOfPairs++;
             }
         }
