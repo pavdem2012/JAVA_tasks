@@ -80,12 +80,12 @@ public class Main {
         // Выведите значение наименьшего из всех положительных элементов в массиве.
         // Известно, что в массиве есть хотя бы один положительный элемент.
         // {5,-4,3,-2,1}
-        int[] intList5 = { 1, 2, 3 };
+        int[] intList5 = { 5, -4, 3, -2, 1 };
         System.out.println(cyclesOperators.smallestOfPositiveElements(intList5));
 
         // Выведите значение наименьшего нечетного элемента списка, а если в списке нет
         // нечетных элементов - выведите число 0 {0,1,2,3,4} -> 1 {2,4,6,8,10} -> 0
-        int[] intList6 = { 5, 2, 1, 0, 4, 3 };
+        int[] intList6 = { 2, 4, 1 };
         System.out.println(
                 "Hаименьший нечетный элемент списка: " + cyclesOperators.smallestOddElementList(intList6) + ";");
 
