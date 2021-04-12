@@ -70,8 +70,8 @@ public class Main {
         // выведите эти числа. Если соседних элементов одного знака нет - не выводите
         // ничего. Если таких пар соседей несколько - выведите первую пару.
         // {-1,2,3,-1,-2}
-        int[] intList4 = { -1, 2, 3, -1, -2 };
-        System.out.print(cyclesOperators.twoAdjacentElements(intList4));
+        int[] Array = { -1, 2, 3, -1, -2 };
+        System.out.print(cyclesOperators.twoAdjacentElements(Array));
 
         // Дан массив. Создать новый массив и наполнить его данным массивом, но в
         // обратном порядке. Вывести новый массив на экран.
@@ -85,7 +85,7 @@ public class Main {
 
         // Выведите значение наименьшего нечетного элемента списка, а если в списке нет
         // нечетных элементов - выведите число 0 {0,1,2,3,4} -> 1 {2,4,6,8,10} -> 0
-        int[] intList6 = { 2, 4, 1 };
+        int[] intList6 = { 5, 2, 1, 0, 4, 3 };
         System.out.println(
                 "Hаименьший нечетный элемент списка: " + cyclesOperators.smallestOddElementList(intList6) + ";");
 
