@@ -379,13 +379,19 @@ public class CyclesOperators {
     // {1,-2,3,-4,5}
     public String cyclicalRightShift(int[] numberArray) {
         String processedText = "";
-        for (int i = 1; i < numberArray.length; i++) {
-            int cache = numberArray[i];
-            numberArray[i] = numberArray[i - 1];
-            numberArray[i - 1] = cache;
+        int n = 1;
+        int[] newArray = new int[numberArray.length];
+        for (int i = numberArray.length-1; i >= 0; i--) {
+            if(i+n >= numberArray.length){
+                newArray[i+n-numberArray.length] = numberArray[i];
+            }
+            else{
+                newArray[i+n] = numberArray[i];
+            }
         }
-        for (int i = 0; i < numberArray.length; i++) {
-            processedText += numberArray[i] + "; ";
+        for (int i : newArray) {
+            //System.out.println(i);
+            processedText += i + "; ";
         }
         return processedText;
     }
