@@ -374,9 +374,14 @@ public class CyclesOperators {
         return processedText;
     }
 
-    // Циклически сдвиньте элементы списка вправо (A[0] переходит на место A[1],
-    // A[1] на место A[2], последний элемент переходит на место A[0]).
-    // {1,-2,3,-4,5}
+/**
+ * Циклически сдвиньте элементы списка вправо (A[0] переходит на место A[1],
+ * A[1] на место A[2], ..., последний элемент переходит на место A[0]).
+ * {1,-2,3,-4,5}
+ * 
+ * @param numberArray array for processing
+ * @return Right-cycled list items
+ */
     public String cyclicalRightShift(int[] numberArray) {
         String processedText = "";
         int n = 1;
