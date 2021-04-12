@@ -295,7 +295,7 @@ public class CyclesOperators {
         int number = 0;
         for (int i = 0; i < numberArray.length; i++) {
             number = numberArray[i];
-            if (number > 0 & numberArray[i] < min) {
+            if (number > 0 & numberArray[i] <= min) {
                 min = number;
                 processedText = "\nНаименьший из положительных элементов: " + min + ";\n";
             }
