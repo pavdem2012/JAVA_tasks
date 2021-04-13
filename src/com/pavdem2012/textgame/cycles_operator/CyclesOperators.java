@@ -312,17 +312,19 @@ public class CyclesOperators {
      */
     public int smallestOddElementList(int[] numberArray) {
         int smallestOddElementList = 0;
-        int n = numberArray.length;
-        int min = numberArray[n - 1];
+        Integer min = null;
         int number = 0;
         for (int i = 0; i < numberArray.length; i++) {
             number = numberArray[i];
-            if (number != 0 & number % 2 != 0 & numberArray[i] <= min) {
-                min = number;
-                smallestOddElementList = min;
-                break;
-            } else {
-                smallestOddElementList = 0;
+            if (number != 0 & number % 2 != 0) {
+                if (min == null) {
+                    min = number;
+                    smallestOddElementList = number;
+                }
+                if (number < min) {
+                    min = number;
+                    smallestOddElementList = number;
+                }
             }
         }
         return smallestOddElementList;
@@ -395,7 +397,6 @@ public class CyclesOperators {
             }
         }
         for (int i : newArray) {
-            //System.out.println(i);
             processedText += i + "; ";
         }
         return processedText;
