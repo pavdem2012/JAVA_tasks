@@ -291,14 +291,20 @@ public class CyclesOperators {
      */
     public String smallestOfPositiveElements(int[] numberArray) {
         String processedText = "";
-        int min = numberArray[0];
+        int min = 0;
+        int cash = 0;
         int number = 0;
         for (int i = 0; i < numberArray.length; i++) {
             number = numberArray[i];
-            if (number > 0 & numberArray[i] <= min) {
-                min = number;
-                processedText = "\nНаименьший из положительных элементов: " + min + ";\n";
+            if (number > 0) {
+                cash = number;
             }
+            for (int j = 0; j < numberArray.length; j++)
+                if (cash >= numberArray[j] & numberArray[j] > 0) {
+                    min = numberArray[j];
+                    cash = min;
+                }
+            processedText = "\nНаименьший из положительных элементов: " + min + ";\n";
         }
         return processedText;
     }
