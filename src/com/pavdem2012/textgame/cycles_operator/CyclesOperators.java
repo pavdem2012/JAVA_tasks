@@ -382,24 +382,23 @@ public class CyclesOperators {
         return processedText;
     }
 
-/**
- * Циклически сдвиньте элементы списка вправо (A[0] переходит на место A[1],
- * A[1] на место A[2], ..., последний элемент переходит на место A[0]).
- * {1,-2,3,-4,5}
- * 
- * @param numberArray array for processing
- * @return Right-cycled list items
- */
+    /**
+     * Циклически сдвиньте элементы списка вправо (A[0] переходит на место A[1],
+     * A[1] на место A[2], ..., последний элемент переходит на место A[0]).
+     * {1,-2,3,-4,5}
+     * 
+     * @param numberArray array for processing
+     * @return Right-cycled list items
+     */
     public String cyclicalRightShift(int[] numberArray) {
         String processedText = "";
         int n = 1;
         int[] newArray = new int[numberArray.length];
-        for (int i = numberArray.length-1; i >= 0; i--) {
-            if(i+n >= numberArray.length){
-                newArray[i+n-numberArray.length] = numberArray[i];
-            }
-            else{
-                newArray[i+n] = numberArray[i];
+        for (int i = numberArray.length - 1; i >= 0; i--) {
+            if (i + n >= numberArray.length) {
+                newArray[i + n - numberArray.length] = numberArray[i];
+            } else {
+                newArray[i + n] = numberArray[i];
             }
         }
         for (int i : newArray) {
@@ -455,5 +454,31 @@ public class CyclesOperators {
                 uniqueArrayElements += numberArray[i] + "; ";
         }
         return uniqueArrayElements;
+    }
+
+    /**
+     * Найдите индексы первого вхождения максимального элемента двумерного массива.
+     * 
+     * @param numberArray array for processing
+     * @return the indices of the first occurrence of an element in a
+     *         two-dimensional array.
+     */
+    public String indicesFirstOccurrenceMaximalElement(int[][] numberArray) {
+        String indicesFirstOccurrenceMaximalElement = "";
+        int cashI = 0;
+        int cashJ = 0;
+        int max = numberArray[0][0];
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                if (numberArray[i][j] > max) {
+                    max = numberArray[i][j];
+                    cashI = i;
+                    cashJ = j;
+                    indicesFirstOccurrenceMaximalElement = "" + cashI + "; " + cashJ + ";";
+                }
+            }
+        }
+        System.out.println("Максимальный элемент массива: " + max + ";\n");
+        return indicesFirstOccurrenceMaximalElement;
     }
 }

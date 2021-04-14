@@ -80,7 +80,7 @@ public class Main {
         // Выведите значение наименьшего из всех положительных элементов в массиве.
         // Известно, что в массиве есть хотя бы один положительный элемент.
         // {5,-4,3,-2,1}
-        int[] intList5 = { 1, 2, 3 };
+        int[] intList5 = { 5, -4, 3, -2, 1 };
         System.out.println(cyclesOperators.smallestOfPositiveElements(intList5));
 
         // Выведите значение наименьшего нечетного элемента списка, а если в списке нет
@@ -130,5 +130,21 @@ public class Main {
         int[] intList11 = { 4, 3, 5, 2, 5, 1, 3, 5 };
         System.out.println("\nЭлементы, встречающиеся в массиве только один раз: "
                 + cyclesOperators.uniqueArrayElements(intList11));
+
+        // Найдите индексы первого вхождения максимального элемента двумерного массива.
+        // {{1, 2, 3, 3, 4, 5}, {6, 5, 4, 4, 2, 1}, {1, 2, 3, 3, 4, 4}, {9, 8, 7, 6, 5,
+        // 6}};
+        int[][] twoDimArray = { { 1, 2, 3, 3, 4, 5 }, { 6, 5, 4, 4, 2, 1 }, { 1, 2, 3, 3, 4, 4 },
+                { 9, 8, 7, 6, 5, 6 } };
+        System.out.println("\nИзначальный массив:\n");
+        for (int i = 0; i < twoDimArray.length; i++) {
+            for (int j = 0; j < twoDimArray[i].length; j++) {
+                System.out.print(twoDimArray[i][j] + "  ");
+            }
+            System.out.println("\n");
+        }
+        System.out.println("Индексы первого вхождения максмиального элемента: "
+                + cyclesOperators.indicesFirstOccurrenceMaximalElement(twoDimArray));
+
     }
 }
