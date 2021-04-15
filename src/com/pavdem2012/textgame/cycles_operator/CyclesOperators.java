@@ -481,4 +481,36 @@ public class CyclesOperators {
         System.out.println("Максимальный элемент массива: " + max + ";\n");
         return indicesFirstOccurrenceMaximalElement;
     }
+
+    /**
+     * Дано нечетное число n, не превосходящее 15. Создайте двумерный массив из n×n
+     * элементов, заполнив его символами "." (каждый элемент массива является
+     * строкой из одного символа). Затем заполните символами "*" среднюю строку
+     * массива, средний столбец массива, главную диагональ и побочную диагональ. В
+     * результате "*" в массиве должны образовывать изображение звездочки. Выведите
+     * полученный массив на экран, разделяя элементы массива пробелами. 
+     * 
+     * @param Array array for processing
+     */
+    public void snowflakeOutput(String[][] Array) {
+        int n = 15;
+        System.out.println("\nМассив n x n заполненный (.):\n");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                Array[i][j] = ".";
+                System.out.print(Array[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("\nМассив со снежинкой:\n");
+        for (int i = 0; i < Array.length; i++) {
+            for (int j = 0; j < Array[i].length; j++) {
+                if (j == n / 2 || i == n / 2 || i == j || i == n - 1 - j) {
+                    Array[i][j] = "*";
+                }
+                System.out.print(Array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
