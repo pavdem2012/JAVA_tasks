@@ -73,4 +73,38 @@ public class ArrayTasks {
             System.out.println();
         }
     }
+
+    /**
+     * Дан двумерный массив и два числа: i и j. Поменяйте в массиве столбцы с
+     * номерами i и j 
+     * 
+     * @param numberArray array for processing;
+     * @param x column number
+     * @param y other column number
+     */
+    public void permutationOfColumns(int[][] numberArray, int x, int y) {
+        int a = numberArray[0].length;
+        if (x > a - 1 || y > a - 1) {
+            System.out.println("\nНомер столбца находится за пределлами массива, введите другое значение.");
+        } else {
+            System.out.println("\nИзначальный массив:\n");
+            for (int i = 0; i < numberArray.length; i++) {
+                for (int j = 0; j < numberArray[i].length; j++) {
+                    System.out.print(numberArray[i][j] + "  ");
+                }
+                System.out.println("\n");
+            }
+            System.out.println("\nМассив с поменяными столбцами:\n");
+            int cash;
+            for (int i = 0; i < numberArray.length; i++) {
+                cash = numberArray[i][x];
+                numberArray[i][x] = numberArray[i][y];
+                numberArray[i][y] = cash;
+                for (int j = 0; j < numberArray[i].length; j++) {
+                    System.out.print(numberArray[i][j] + "  ");
+                }
+                System.out.println("\n");
+            }
+        }
+    }
 }

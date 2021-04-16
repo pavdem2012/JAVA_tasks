@@ -38,6 +38,12 @@ public class Main {
         n = b;
         int[][] twoDimArray2 = new int[n][n];
         arrayTasks.fillingFromMainDiagonal(twoDimArray2);
-    }
 
+        // Дан двумерный массив и два числа: i и j. Поменяйте в массиве столбцы с
+        // номерами i и j
+        int x = 0;
+        int y = 1;
+        int[][] twoDimArray3 = { { 11, 12, 13, 14 }, { 21, 22, 23, 24 }, { 31, 32, 33, 34 } };
+        arrayTasks.permutationOfColumns(twoDimArray3 , x , y);
+    }
 }
