@@ -107,4 +107,42 @@ public class ArrayTasks {
             }
         }
     }
+
+    /**
+     * Дано число n, не превосходящее 10, и массив размером n × n. Проверьте,
+     * является ли этот массив симметричным относительно главной диагонали. Выведите
+     * слово “YES”, если массив симметричный, и слово “NO” в противном случае.
+     * 
+     * @param numberArray array for processing;
+     * @param n size and maximum number of array
+     */
+    public void checkingSymmetryArray(int[][] numberArray, int n) {
+        System.out.println("\nПолученый массив:\n");
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                numberArray[i][j] = (int) (Math.random() * n);
+                System.out.print(numberArray[i][j] + "  ");
+            }
+            System.out.println("");
+        }
+        String Output = "";
+        int nonconformityCounter = 0;
+        int cashI = 0;
+        int cashJ = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                cashI = numberArray[i][j];
+                cashJ = numberArray[j][i];
+                if (cashI != cashJ) {
+                    nonconformityCounter++;
+                }
+                    if (nonconformityCounter > 0) {
+                    Output = "NO";
+                } else {
+                    Output = "YES";
+                }
+            }
+        }
+        System.out.println("\n" + Output);
+    }
 }

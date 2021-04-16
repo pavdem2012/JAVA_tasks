@@ -44,6 +44,14 @@ public class Main {
         int x = 0;
         int y = 1;
         int[][] twoDimArray3 = { { 11, 12, 13, 14 }, { 21, 22, 23, 24 }, { 31, 32, 33, 34 } };
-        arrayTasks.permutationOfColumns(twoDimArray3 , x , y);
+        arrayTasks.permutationOfColumns(twoDimArray3, x, y);
+
+        // Дано число n, не превосходящее 10, и массив размером n × n. Проверьте,
+        // является ли этот массив симметричным относительно главной диагонали. Выведите
+        // слово “YES”, если массив симметричный, и слово “NO” в противном случае.
+        int d = 10;
+        n = d;
+        int[][] twoDimArray4 = new int[n][n];
+        arrayTasks.checkingSymmetryArray(twoDimArray4, n);
     }
 }
