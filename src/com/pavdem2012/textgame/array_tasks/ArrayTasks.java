@@ -35,11 +35,12 @@ public class ArrayTasks {
      * массива, средний столбец массива, главную диагональ и побочную диагональ. В
      * результате "*" в массиве должны образовывать изображение звездочки. Выведите
      * полученный массив на экран, разделяя элементы массива пробелами.
+     * @param n 
      * 
      * @param charArray array for processing
      */
-    public void snowflakeOutput(String[][] charArray) {
-        int n = 15;
+    public void snowflakeOutput(int n) {
+        String[][] charArray = new String[n][n];
         System.out.println("\nМассив n x n заполненный (.):\n");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
