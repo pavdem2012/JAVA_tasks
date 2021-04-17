@@ -17,7 +17,7 @@ public class Main {
             System.out.println("\n");
         }
         System.out.println("Индексы первого вхождения максмиального элемента: "
-                + arrayTasks.indicesFirstOccurrenceMaximalElement(twoDimArray));
+                + arrayTasks.getMaxElement(twoDimArray));
 
         // Дано нечетное число n, не превосходящее 15. Создайте двумерный массив из n×n
         // элементов, заполнив его символами "." (каждый элемент массива является

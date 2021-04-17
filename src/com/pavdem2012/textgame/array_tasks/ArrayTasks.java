@@ -9,7 +9,7 @@ public class ArrayTasks {
      * @return the indices of the first occurrence of an element in a
      *         two-dimensional array.
      */
-    public String indicesFirstOccurrenceMaximalElement(int[][] numberArray) {
+    public String getMaxElement(int[][] numberArray) {
         String indicesFirstOccurrenceMaximalElement = "";
         int cashI = 0;
         int cashJ = 0;
