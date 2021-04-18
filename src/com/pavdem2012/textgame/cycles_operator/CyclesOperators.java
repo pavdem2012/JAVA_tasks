@@ -284,27 +284,23 @@ public class CyclesOperators {
     /**
      * Выведите значение наименьшего из всех положительных элементов в массиве.
      * Известно, что в массиве есть хотя бы один положительный элемент.
-     * {5,-4,3,-2,1}
+     * {5,-4,3,-2,1,7,8}
      * 
      * @param numberArray array for processing
      * @return smallest of all positive elements in the array
      */
     public String smallestOfPositiveElements(int[] numberArray) {
         String processedText = "";
-        int min = 0;
-        int cash = 0;
+        Integer min = null;
         int number = 0;
         for (int i = 0; i < numberArray.length; i++) {
             number = numberArray[i];
-            
-            if (number > 0) {
-                cash = number;
+            if (min == null & number > 0) {
+                min = number;
             }
-            for (int j = 0; j < numberArray.length; j++)
-                if (cash >= numberArray[i] & numberArray[j] > 0) {
-                    min = numberArray[j];
-                    cash = min;
-                }
+            if (min != null && min >= number & number > 0) {
+                min = number;
+            }
             processedText = "\nНаименьший из положительных элементов: " + min + ";\n";
         }
         return processedText;
