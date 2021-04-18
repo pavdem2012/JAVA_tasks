@@ -39,7 +39,7 @@ public class ArrayTasks {
      * 
      * @param charArray array for processing
      */
-    public void snowflakeOutput(int n) {
+    public void printSnowFlake(int n) {
         String[][] charArray = new String[n][n];
         System.out.println("\nМассив n x n заполненный (.):\n");
         for (int i = 0; i < n; i++) {
