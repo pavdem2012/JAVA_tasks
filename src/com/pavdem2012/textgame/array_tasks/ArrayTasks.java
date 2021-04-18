@@ -155,4 +155,53 @@ public class ArrayTasks {
         }
         System.out.println("\n" + Output);
     }
+
+    /**
+     * "В кинотеатре n рядов по m мест в каждом (n и m не превосходят 20). В
+     * двумерном массиве хранится информация о проданных билетах, число 1 означает,
+     * что билет на данное место уже продан, число 0 означает, что место свободно.
+     * Поступил запрос на продажу k билетов на соседние места в одном ряду.
+     * Определите, можно ли выполнить такой запрос. Программа должна вывести номер
+     * ряда, в котором есть k подряд идущих свободных мест. Если таких рядов
+     * несколько, то выведите номер наименьшего подходящего ряда. Если подходящего
+     * ряда нет, выведите число 0."
+     * 
+     * @param n the number of rows in the cinema;
+     * @param m number of seats in a row;
+     * @param k the required number of seats nearby
+     */
+    public void checkingFreeSeats(int n, int m, int k) {
+        if (k > m) {
+            System.out.println("\nРяд кинотеатра вмещает всего " + m + " мест.");
+            return;
+        }
+        int[][] numberArray = new int[n][m];
+        System.out.println("\nПлан кинозала с продаными билетами:\n");
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                numberArray[i][j] = (int) (Math.random() * 2);
+                System.out.print(numberArray[i][j] + "  ");
+            }
+            System.out.println("");
+        }
+        int emptyPlace = 0;
+        int countEmptyPlace = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                emptyPlace = numberArray[i][j];
+                if (emptyPlace == 0) {
+                    countEmptyPlace++;
+                } else if (emptyPlace != 0 | j == m) {
+                    countEmptyPlace = 0;
+                }
+                if (countEmptyPlace == k) {
+                    System.out.println("\nВозможно приобрести билеты в " + (i + 1) + " ряд.");
+                    return;
+                }
+            }
+        }
+        if (countEmptyPlace == 0) {
+            System.out.println("\nБилетов по вашему запросу 0.");
+        }
+    }
 }
