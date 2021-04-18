@@ -5,7 +5,7 @@ public class ArrayTasks {
     /**
      * Найдите индексы первого вхождения максимального элемента двумерного массива.
      * 
-     * @param numberArray array for processing
+     * @param numberArray array for processing;
      * @return the indices of the first occurrence of an element in a
      *         two-dimensional array.
      */
@@ -35,9 +35,9 @@ public class ArrayTasks {
      * массива, средний столбец массива, главную диагональ и побочную диагональ. В
      * результате "*" в массиве должны образовывать изображение звездочки. Выведите
      * полученный массив на экран, разделяя элементы массива пробелами.
-     * @param n 
+     * @param n array size;
      * 
-     * @param charArray array for processing
+     * @param charArray array for processing;
      */
     public void printSnowFlake(int n) {
         String[][] charArray = new String[n][n];
@@ -61,6 +61,15 @@ public class ArrayTasks {
         }
     }
 
+    /**
+     * Дано число n, не превышающее 100. Создайте массив размером n×n и заполните
+     * его по следующему правилу. На главной диагонали должны быть записаны числа 0.
+     * На двух диагоналях, прилегающих к главной, числа 1. На следующих двух
+     * диагоналях числа 2, и т.д. Выведите полученный массив на экран, разделяя
+     * элементы массива пробелами.
+     * 
+     * @param numberArray array for processing;
+     */
     public void fillingFromMainDiagonal(int[][] numberArray) {
         System.out.println("\nЗаполненный массив:\n");
         for (int i = 0; i < numberArray.length; i++) {
@@ -80,8 +89,8 @@ public class ArrayTasks {
      * номерами i и j 
      * 
      * @param numberArray array for processing;
-     * @param x column number
-     * @param y other column number
+     * @param x column number;
+     * @param y other column number;
      */
     public void permutationOfColumns(int[][] numberArray, int x, int y) {
         int a = numberArray[0].length;
@@ -115,7 +124,7 @@ public class ArrayTasks {
      * слово “YES”, если массив симметричный, и слово “NO” в противном случае.
      * 
      * @param numberArray array for processing;
-     * @param n size and maximum number of array
+     * @param n size and maximum number of array;
      */
     public void checkingSymmetryArray(int[][] numberArray, int n) {
         System.out.println("\nПолученый массив:\n");
