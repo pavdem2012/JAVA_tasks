@@ -101,9 +101,9 @@ public class ArrayTasks {
             System.out.println("\nИзначальный массив:\n");
             for (int i = 0; i < numberArray.length; i++) {
                 for (int j = 0; j < numberArray[i].length; j++) {
-                    System.out.print(numberArray[i][j] + "  ");
+                    System.out.print(numberArray[i][j] + " ");
                 }
-                System.out.println("\n");
+                System.out.println("");
             }
             System.out.println("\nМассив с поменяными столбцами:\n");
             int cash;
@@ -112,9 +112,9 @@ public class ArrayTasks {
                 numberArray[i][x] = numberArray[i][y];
                 numberArray[i][y] = cash;
                 for (int j = 0; j < numberArray[i].length; j++) {
-                    System.out.print(numberArray[i][j] + "  ");
+                    System.out.print(numberArray[i][j] + " ");
                 }
-                System.out.println("\n");
+                System.out.println("");
             }
         }
     }
@@ -132,7 +132,7 @@ public class ArrayTasks {
         for (int i = 0; i < numberArray.length; i++) {
             for (int j = 0; j < numberArray[i].length; j++) {
                 numberArray[i][j] = (int) (Math.random() * n);
-                System.out.print(numberArray[i][j] + "  ");
+                System.out.print(numberArray[i][j] + " ");
             }
             System.out.println("");
         }
@@ -169,7 +169,7 @@ public class ArrayTasks {
      * 
      * @param n the number of rows in the cinema;
      * @param m number of seats in a row;
-     * @param k the required number of seats nearby
+     * @param k the required number of seats nearby;
      */
     public void checkingFreeSeats(int n, int m, int k) {
         if (k > m) {
@@ -181,13 +181,13 @@ public class ArrayTasks {
         for (int i = 0; i < numberArray.length; i++) {
             for (int j = 0; j < numberArray[i].length; j++) {
                 numberArray[i][j] = (int) (Math.random() * 2);
-                System.out.print(numberArray[i][j] + "  ");
+                System.out.print(numberArray[i][j] + " ");
             }
             System.out.println("");
         }
         Integer emptyPlace = null;
         for (int i = 0; i < n; i++) {
-emptyPlace = 0;
+            emptyPlace = 0;
             for (int j = 0; j < m; j++) {
                 if (numberArray[i][j] == 0) {
                     emptyPlace++;
@@ -201,10 +201,42 @@ emptyPlace = 0;
             }
             if (emptyPlace == k) {
                 break;
-            } 
+            }
         }
         if (emptyPlace != k) {
-        System.out.println("\nБилетов по вашему запросу 0.");
+            System.out.println("\nБилетов по вашему запросу 0.");
+        }
+    }
+
+    /**
+     * Дан прямоугольный массив размером n×m. Поверните его на 90 градусов по
+     * часовой стрелке, записав результат в новый массив размером m×n.
+     * 
+     * @param n number in the original array lines;
+     * @param m number in the original array columns;
+     */
+    public void rotationArray(int n, int m) {
+        int[][] numberArray = new int[n][m];
+        int[][] temporary = new int[m][n];
+        System.out.println("\nНаполненный изначальный масив:\n");
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                numberArray[i][j] = (int) (Math.random() * m);
+                System.out.print(numberArray[i][j] + " ");
+            }
+            System.out.println("");
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                temporary[j][n - 1 - i] = numberArray[i][j];
+            }
+        }
+        System.out.println("\nМасив повернутый на 90':\n");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(temporary[i][j] + " ");
+            }
+            System.out.println("");
         }
     }
 }
