@@ -82,5 +82,13 @@ public class Main {
         int m2 = 5;
         m = m2;
         arrayTasks.snakeFillingArray(n, m);
+
+        // По числам n и m заполнить массив размерности n×m числами от 1 до произведения
+        // n и m по диагоналям.
+        int n4 = 3;
+        n = n4;
+        int m3 = 5;
+        m = m3;
+        arrayTasks.diagonallyFillingArray(n, m);
     }
 }

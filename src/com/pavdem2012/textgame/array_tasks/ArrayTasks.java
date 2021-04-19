@@ -239,7 +239,14 @@ public class ArrayTasks {
         }
     }
 
-    public void snakeFillingArray(int n, int m ) {
+    /**
+     * По данным числам n и m заполните двумерный массив размером n×m числами от 1
+     * до n×m “змейкой”.
+     * 
+     * @param n number the array lines;
+     * @param m number the array columns;
+     */
+    public void snakeFillingArray(int n, int m) {
         int[][] numberArray = new int[n][m];
         int num = 1;
         for (int i = 0; i < numberArray.length; i++) {
@@ -259,6 +266,60 @@ public class ArrayTasks {
         for (int i = 0; i < numberArray.length; i++) {
             for (int j = 0; j < numberArray[i].length; j++) {
                 System.out.print(numberArray[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    /**
+     * По числам n и m заполнить массив размерности n×m числами от 1 до произведения
+     * n и m по диагоналям.
+     * 
+     * @param n number the array lines;
+     * @param m number the array columns;
+     */
+    public void diagonallyFillingArray(int n, int m) {
+        int num = 0;
+        int[][] numberArray = new int[n][m];
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                numberArray[i][j] = ++num;
+            }
+        }
+        int[][] result = new int[n][m];
+        int rowIndex = 0;
+        int columnIndex = 0;
+        int currentRow = 0;
+        int currentColumn = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                result[currentRow][currentColumn] = numberArray[i][j];
+                if (currentRow == n - 1) {
+                    if (n < m && columnIndex < m - 1) {
+                        currentRow = 0;
+                        currentColumn = ++columnIndex;
+                    } else {
+                        currentRow = ++rowIndex;
+                        currentColumn = m - 1;
+                    }
+                } else if (currentColumn == 0) {
+                    if (columnIndex < m - 1) {
+                        currentRow = rowIndex;
+                        currentColumn = ++columnIndex;
+                    } else {
+                        currentColumn = columnIndex;
+                        currentRow = ++rowIndex;
+                    }
+                } else {
+                    currentRow++;
+                    currentColumn--;
+                }
+            }
+        }
+        System.out.println("\nМассив заполненый по диагонали:\n");
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[i].length; j++) {
+                System.out.print(result[i][j] + "  ");
             }
             System.out.println("");
         }
