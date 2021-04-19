@@ -36,10 +36,9 @@ public class ArrayTasks {
      * результате "*" в массиве должны образовывать изображение звездочки. Выведите
      * полученный массив на экран, разделяя элементы массива пробелами.
      * 
-     * @param n         array size;
-     * 
-     * @param charArray array for processing;
+     * @param n array size;
      */
+
     public void printSnowFlake(int n) {
         String[][] charArray = new String[n][n];
         System.out.println("\nМассив n x n заполненный (.):\n");
