@@ -35,7 +35,8 @@ public class ArrayTasks {
      * массива, средний столбец массива, главную диагональ и побочную диагональ. В
      * результате "*" в массиве должны образовывать изображение звездочки. Выведите
      * полученный массив на экран, разделяя элементы массива пробелами.
-     * @param n array size;
+     * 
+     * @param n         array size;
      * 
      * @param charArray array for processing;
      */
@@ -86,11 +87,11 @@ public class ArrayTasks {
 
     /**
      * Дан двумерный массив и два числа: i и j. Поменяйте в массиве столбцы с
-     * номерами i и j 
+     * номерами i и j
      * 
      * @param numberArray array for processing;
-     * @param x column number;
-     * @param y other column number;
+     * @param x           column number;
+     * @param y           other column number;
      */
     public void permutationOfColumns(int[][] numberArray, int x, int y) {
         int a = numberArray[0].length;
@@ -124,7 +125,7 @@ public class ArrayTasks {
      * слово “YES”, если массив симметричный, и слово “NO” в противном случае.
      * 
      * @param numberArray array for processing;
-     * @param n size and maximum number of array;
+     * @param n           size and maximum number of array;
      */
     public void checkingSymmetryArray(int[][] numberArray, int n) {
         System.out.println("\nПолученый массив:\n");
@@ -146,7 +147,7 @@ public class ArrayTasks {
                 if (cashI != cashJ) {
                     nonconformityCounter++;
                 }
-                    if (nonconformityCounter > 0) {
+                if (nonconformityCounter > 0) {
                     Output = "NO";
                 } else {
                     Output = "YES";
@@ -184,24 +185,26 @@ public class ArrayTasks {
             }
             System.out.println("");
         }
-        int emptyPlace = 0;
-        int countEmptyPlace = 0;
+        Integer emptyPlace = null;
         for (int i = 0; i < n; i++) {
+emptyPlace = 0;
             for (int j = 0; j < m; j++) {
-                emptyPlace = numberArray[i][j];
-                if (emptyPlace == 0) {
-                    countEmptyPlace++;
-                } else if (emptyPlace != 0 | j == m) {
-                    countEmptyPlace = 0;
-                }
-                if (countEmptyPlace == k) {
-                    System.out.println("\nВозможно приобрести билеты в " + (i + 1) + " ряд.");
-                    return;
+                if (numberArray[i][j] == 0) {
+                    emptyPlace++;
+                    if (emptyPlace == k) {
+                        System.out.println("\nВозможно приобрести билеты в " + (i + 1) + " ряд.");
+                        break;
+                    }
+                } else {
+                    emptyPlace = 0;
                 }
             }
+            if (emptyPlace == k) {
+                break;
+            } 
         }
-        if (countEmptyPlace == 0) {
-            System.out.println("\nБилетов по вашему запросу 0.");
+        if (emptyPlace != k) {
+        System.out.println("\nБилетов по вашему запросу 0.");
         }
     }
 }
