@@ -74,5 +74,13 @@ public class Main {
         int m1 = 4;
         m = m1;
         arrayTasks.rotationArray(n, m);
+
+        // По данным числам n и m заполните двумерный массив размером n×m числами от 1
+        // до n×m “змейкой”.
+        int n3 = 3;
+        n = n3;
+        int m2 = 5;
+        m = m2;
+        arrayTasks.snakeFillingArray(n, m);
     }
 }

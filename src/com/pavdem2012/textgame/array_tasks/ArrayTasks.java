@@ -139,8 +139,8 @@ public class ArrayTasks {
         int nonconformityCounter = 0;
         int cashI = 0;
         int cashJ = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
                 cashI = numberArray[i][j];
                 cashJ = numberArray[j][i];
                 if (cashI != cashJ) {
@@ -185,9 +185,9 @@ public class ArrayTasks {
             System.out.println("");
         }
         Integer emptyPlace = null;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < numberArray.length; i++) {
             emptyPlace = 0;
-            for (int j = 0; j < m; j++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
                 if (numberArray[i][j] == 0) {
                     emptyPlace++;
                     if (emptyPlace == k) {
@@ -234,6 +234,31 @@ public class ArrayTasks {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print(temporary[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    public void snakeFillingArray(int n, int m ) {
+        int[][] numberArray = new int[n][m];
+        int num = 1;
+        for (int i = 0; i < numberArray.length; i++) {
+            if (i % 2 == 0) {
+                for (int j = 0; j < numberArray[i].length; j++) {
+                    numberArray[i][j] = num;
+                    num++;
+                }
+            } else {
+                for (int j = m - 1; j >= 0; j--) {
+                    numberArray[i][j] = num;
+                    num++;
+                }
+            }
+        }
+        System.out.println("\nМассив заполненный" + "змейкой" + ":\n");
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                System.out.print(numberArray[i][j] + " ");
             }
             System.out.println("");
         }
