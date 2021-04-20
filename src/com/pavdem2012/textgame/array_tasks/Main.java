@@ -96,5 +96,11 @@ public class Main {
         int a = 3;
         int c = 5;
         arrayTasks.checkerboardPatternFilling(a, c);
+
+        // Двумерный массив размером k*x наполнить числами от 1 до k*x в виде
+        // свернувшейся калачиком змейки.
+        int f = 4;
+        int g = 5;
+        arrayTasks.spiralFillingArray(f, g);
     }
 }

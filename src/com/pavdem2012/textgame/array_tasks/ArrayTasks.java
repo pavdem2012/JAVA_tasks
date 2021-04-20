@@ -356,4 +356,76 @@ public class ArrayTasks {
             System.out.println("");
         }
     }
+
+    /**
+     * Двумерный массив размером k*x наполнить числами от 1 до k*x в виде
+     * свернувшейся калачиком змейки.
+     * 
+     * @param f number the array lines;
+     * @param g c number the array columns;
+     */
+    public void spiralFillingArray(int f, int g) {
+        int[][] array = new int[f][g];
+        int num = 1;
+        for (int i = 0; i < g; i++) {
+            array[0][i] = num;
+            num++;
+        }
+        for (int j = 1; j < f; j++) {
+            array[j][g - 1] = num;
+            num++;
+        }
+        for (int i = g - 2; i >= 0; i--) {
+            array[f - 1][i] = num;
+            num++;
+        }
+        for (int j = f - 2; j > 0; j--) {
+            array[j][0] = num;
+            num++;
+        }
+        int iX = 1;
+        int jY = 1;
+        while (num < f * g) {
+            while (array[iX][jY + 1] == 0) {
+                array[iX][jY] = num;
+                num++;
+                jY++;
+            }
+            while (array[iX + 1][jY] == 0) {
+                array[iX][jY] = num;
+                num++;
+                iX++;
+            }
+            while (array[iX][jY - 1] == 0) {
+                array[iX][jY] = num;
+                num++;
+                jY--;
+            }
+            while (array[iX - 1][jY] == 0) {
+                array[iX][jY] = num;
+                num++;
+                iX--;
+            }
+        }
+        for (int i = 0; i < f; i++) {
+            for (int j = 0; j < g; j++) {
+                if (array[i][j] == 0) {
+                    array[i][j] = num;
+                }
+            }
+        }
+        System.out.println("\nМассив в виде свернувшейся калачиком змейки:\n");
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] % 10 == array[i][j]) {
+                    System.out.print(array[i][j] + "   ");
+                } else if (array[i][j] % 100 == array[i][j]) {
+                    System.out.print(array[i][j] + "  ");
+                } else if (array[i][j] % 1000 == array[i][j]) {
+                    System.out.print(array[i][j] + " ");
+                }
+            }
+            System.out.println("");
+        }
+    }
 }
