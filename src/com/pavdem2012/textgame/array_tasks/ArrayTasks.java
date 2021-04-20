@@ -324,4 +324,36 @@ public class ArrayTasks {
             System.out.println("");
         }
     }
+
+    /**
+     * Заполнить массив размером k × x в виде шахматной доски. Вместо одного цвета
+     * 0, другого - числа по возрастанию. В левом верхнем углу число 1.
+     * 
+     * @param a number the array lines;
+     * @param c number the array columns;
+     */
+    public void checkerboardPatternFilling(int a, int c) {
+        int pass = 0;
+        int number = 1;
+        int[][] numberArray = new int[a][c];
+        for (int i = 0; i < a; i++) {
+            if (i % 2 == 1) {
+                pass = 1;
+            } else {
+                pass = 0;
+            }
+            for (int j = pass; j < c; j++) {
+                numberArray[i][j] = number;
+                number++;
+                j++;
+            }
+        }
+        System.out.println("\nМассив заполненный в шахматном порядке:\n");
+        for (int i = 0; i < numberArray.length; i++) {
+            for (int j = 0; j < numberArray[i].length; j++) {
+                System.out.print(numberArray[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
 }

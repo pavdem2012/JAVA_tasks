@@ -90,5 +90,11 @@ public class Main {
         int m3 = 5;
         m = m3;
         arrayTasks.diagonallyFillingArray(n, m);
+
+        // Заполнить массив размером k × x в виде шахматной доски. Вместо одного цвета
+        // 0, другого - числа по возрастанию. В левом верхнем углу число 1.
+        int a = 3;
+        int c = 5;
+        arrayTasks.checkerboardPatternFilling(a, c);
     }
 }
