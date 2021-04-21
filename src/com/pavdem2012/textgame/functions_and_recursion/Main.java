@@ -14,12 +14,12 @@ public class Main {
         int a = in.nextInt();
         System.out.print("Введите любое число b: ");
         int b = in.nextInt();
-        System.out.println("\nМинимальное из двух чисел a и b - число " + functionsAndRecursion.returnMin2(a , b));
+        System.out.println("\nМинимальное из двух чисел a и b - число " + functionsAndRecursion.getMin(a , b));
         System.out.print("\nВведите любое число c: ");
         int c = in.nextInt();
         System.out.print("Введите любое число d: ");
         int d = in.nextInt();
-        System.out.println("\nМинимальное из четырех чисел a, b, c, d - число " + functionsAndRecursion.returnMin4(a, b, c, d));
+        System.out.println("\nМинимальное из четырех чисел a, b, c, d - число " + functionsAndRecursion.getMin(a, b, c, d));
         in.close();;
     }
 
