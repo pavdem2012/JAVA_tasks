@@ -3,13 +3,13 @@ package com.pavdem2012.textgame.functions_and_recursion;
 public class FunctionsAndRecursion {
 
     public int getMin(int a, int b) {
-        int X;
+        int s;
         if (a < b) {
-            X = a;
+            s = a;
         } else {
-            X = b;
+            s = b;
         }
-        return X;
+        return s;
     }
 
     public int getMin(int a, int b, int c, int d) {
