@@ -46,12 +46,21 @@ public class FunctionsAndRecursion {
      * @param f any valid number entered.
      * @param n any entered integer.
      * @return f to power n.
+     * @throws Exception critical exponentiation error.
      */
-    public double power(double f, int n) {
-        double result = 1;
-        for (int i = 1; i <= n; i++) {
-            result = result * f;
+    public double power(double f, int n) throws Exception {
+        if (f == 0 & n == 0) {
+            throw new Exception("\nНоль в нулевой степени неопределён и лишён смысла!!!");
         }
-        return result;
+        if (n < 0) {
+            throw new Exception("\nCтепень должна быть >= 0!!!");
+        }
+        if (n == 0) {
+            return 1;
+        }
+        if (n == 1) {
+            return f;
+        }
+        return f * power(f, n - 1);
     }
 }

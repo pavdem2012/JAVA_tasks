@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         FunctionsAndRecursion functionsAndRecursion = new FunctionsAndRecursion();
         // Напишите функцию min(a, b), вычисляющую минимум двух чисел. Затем напишите
         // функцию min4(a, b, c, d), вычисляющую минимум 4 чисел с помощью функции min.
@@ -19,8 +19,8 @@ public class Main {
         int c = in.nextInt();
         System.out.print("Введите любое целое число d: ");
         int d = in.nextInt();
-        System.out.println("\nМинимальное из четырех целых чисел a, b, c, d - число: "
-                + functionsAndRecursion.getMin(a, b, c, d));
+        System.out.println(
+                "\nМинимальное из четырех целых чисел a, b, c, d - число: " + functionsAndRecursion.getMin(a, b, c, d));
 
         // Даны четыре действительных числа: x1, y1, x2, y2. Напишите функцию
         // distance(x1, y1, x2, y2), вычисляющую расстояние между точкой (x1. y1) и (x2,
@@ -34,8 +34,8 @@ public class Main {
         double x2 = in.nextDouble();
         System.out.print("Введите любое действительное число y2: ");
         double y2 = in.nextDouble();
-        System.out.println(
-                "\nРасстояние между точкой (x1, y1) и (x2, y2) равно: " + functionsAndRecursion.getDistance(x1, x2, y1, y2));
+        System.out.println("\nРасстояние между точкой (x1, y1) и (x2, y2) равно: "
+                + functionsAndRecursion.getDistance(x1, x2, y1, y2));
 
         // "Дано действительное положительное число a и целоe число n. Вычислите a в
         // степени n. Решение оформите в виде рекурсивной функции power(f, n)."
@@ -43,7 +43,7 @@ public class Main {
         double f = in.nextDouble();
         System.out.print("\nВведите любое целое число n: ");
         int n = in.nextInt();
-        System.out.println("\nf в степени n равно: " + functionsAndRecursion.power(f, n));
         in.close();
+        System.out.println("\nf в степени n равно: " + functionsAndRecursion.power(f, n));
     }
 }
