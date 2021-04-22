@@ -11,9 +11,8 @@ public class FunctionsAndRecursion {
     public int getMin(int a, int b) {
         if (a < b) {
             return a;
-        } 
-            return b;
-        
+        }
+        return b;
     }
 
     /**
@@ -38,5 +37,21 @@ public class FunctionsAndRecursion {
      */
     public double getDistance(double x1, double x2, double y1, double y2) {
         return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    }
+
+    /**
+     * "Дано действительное положительное число f и целоe число n. Вычислите f в
+     * степени n. Решение оформите в виде рекурсивной функции power(f, n)."
+     * 
+     * @param f any valid number entered.
+     * @param n any entered integer.
+     * @return f to power n.
+     */
+    public double power(double f, int n) {
+        double result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * f;
+        }
+        return result;
     }
 }

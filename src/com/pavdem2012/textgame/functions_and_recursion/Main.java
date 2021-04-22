@@ -14,12 +14,12 @@ public class Main {
         int a = in.nextInt();
         System.out.print("Введите любое целое число b: ");
         int b = in.nextInt();
-        System.out.println("\nМинимальное из двух целых чисел a и b - число - " + functionsAndRecursion.getMin(a, b));
+        System.out.println("\nМинимальное из двух целых чисел a и b - число: " + functionsAndRecursion.getMin(a, b));
         System.out.print("\nВведите любое целое число c: ");
         int c = in.nextInt();
         System.out.print("Введите любое целое число d: ");
         int d = in.nextInt();
-        System.out.println("\nМинимальное из четырех целых чисел a, b, c, d - число - "
+        System.out.println("\nМинимальное из четырех целых чисел a, b, c, d - число: "
                 + functionsAndRecursion.getMin(a, b, c, d));
 
         // Даны четыре действительных числа: x1, y1, x2, y2. Напишите функцию
@@ -35,7 +35,15 @@ public class Main {
         System.out.print("Введите любое действительное число y2: ");
         double y2 = in.nextDouble();
         System.out.println(
-                "\nРасстояние между точкой (x1, y1) и (x2, y2) - " + functionsAndRecursion.getDistance(x1, x2, y1, y2));
+                "\nРасстояние между точкой (x1, y1) и (x2, y2) равно: " + functionsAndRecursion.getDistance(x1, x2, y1, y2));
+
+        // "Дано действительное положительное число a и целоe число n. Вычислите a в
+        // степени n. Решение оформите в виде рекурсивной функции power(f, n)."
+        System.out.print("\nВведите любое действительное положительное число f: ");
+        double f = in.nextDouble();
+        System.out.print("\nВведите любое целое число n: ");
+        int n = in.nextInt();
+        System.out.println("\nf в степени n равно: " + functionsAndRecursion.power(f, n));
         in.close();
     }
 }
