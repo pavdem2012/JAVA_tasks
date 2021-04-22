@@ -9,7 +9,11 @@ public class FunctionsAndRecursion {
      * @return minimum of any two entered numbers.
      */
     public int getMin(int a, int b) {
-        return Math.min(a, b);
+        if (a < b) {
+            return a;
+        } 
+            return b;
+        
     }
 
     /**
@@ -21,8 +25,7 @@ public class FunctionsAndRecursion {
      * @return minimum of any four entered numbers.
      */
     public int getMin(int a, int b, int c, int d) {
-        getMin(c, d);
-        return Math.min(getMin(a, b), getMin(c, d));
+        return getMin(getMin(a, b), getMin(c, d));
     }
 
     /**
