@@ -58,9 +58,6 @@ public class FunctionsAndRecursion {
         if (n == 0) {
             return 1;
         }
-        if (n == 1) {
-            return f;
-        }
         return f * power(f, n - 1);
     }
 }
