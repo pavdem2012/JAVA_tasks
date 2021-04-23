@@ -80,4 +80,20 @@ public class FunctionsAndRecursion {
         }
         return e;
     }
+
+    /**
+     * Решение через рекурсивную функцию: "Дано натуральное число e > 1. Выведите его наименьший делитель, отличный от
+     * 1. Решение оформите в виде функции MinDivisor(e). Количество операций в
+     * программе должно быть пропорционально корню из e. Указание. Если у числа e
+     * нет делителя, меньшего e , то число e — простое и ответом будет само число
+     * e."
+     * @param e any natural number >1.
+     * @param d is optional and has a default value of 2.
+     * @return least divisor of a natural number e.
+     */
+    public  int minDivisor(int e, int d) {
+        if (e % d == 0)
+            return d;
+        return minDivisor(e, ++d);
+    }
 }

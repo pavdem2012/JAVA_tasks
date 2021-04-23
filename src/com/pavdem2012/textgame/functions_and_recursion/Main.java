@@ -52,7 +52,10 @@ public class Main {
         // n."
         System.out.println("\nВведите любое натуральное число e: ");
         int e = in.nextInt();
-        System.out.println ("Наименьший делитель числа е: " + functionsAndRecursion.minDivisor(e));
+        System.out.println ("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e));
+
+        //Альтернативное решение.
+        System.out.println ("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e, 2));
         in.close();
     }
 }
