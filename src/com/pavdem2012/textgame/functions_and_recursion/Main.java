@@ -50,12 +50,29 @@ public class Main {
         // программе должно быть пропорционально корню из n. Указание. Если у числа n
         // нет делителя, меньшего n , то число n — простое и ответом будет само число
         // n."
-        System.out.println("\nВведите любое натуральное число e: ");
+        System.out.println("\nВведите любое натуральное число e > 1: ");
         int e = in.nextInt();
-        System.out.println ("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e));
+        System.out.println("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e));
 
-        //Альтернативное решение.
-        System.out.println ("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e, 2));
+        // Альтернативное решение.
+        System.out.println("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e, 2));
+
+        // "Дано натуральное число g > 1. Проверьте, является ли оно простым. Программа
+        // должна вывести слово YES, если число простое и NO, если число составное.
+        // Решение оформите в виде функции IsPrime(g), которая возвращает True для
+        // простых чисел и False для составных чисел. Количество операций в программе
+        // должно быть пропорционально корню из g."
+        System.out.println("\nВведите любое натуральное число g > 1: ");
+        int g = in.nextInt();
+        boolean isPrime = functionsAndRecursion.isPrime(g, 0);
+        if (isPrime) {
+            System.out.println("Число g является простым: YES");
+        } else {
+            System.out.println("Число g является простым: NO");
+        }
+        // Альтернативное решение.
+        System.out.println("\nЧисло g является простым: " + functionsAndRecursion.isPrime(g));
         in.close();
+
     }
 }
