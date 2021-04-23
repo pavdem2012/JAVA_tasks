@@ -50,14 +50,34 @@ public class FunctionsAndRecursion {
      */
     public double power(double f, int n) throws Exception {
         if (f == 0 & n == 0) {
-            throw new Exception("\nНоль в нулевой степени неопределён и лишён смысла!!!");
+            throw new Exception("Ноль в нулевой степени неопределён и лишён смысла!!!");
         }
         if (n < 0) {
-            throw new Exception("\nCтепень должна быть >= 0!!!");
+            throw new Exception("Cтепень должна быть >= 0!!!");
         }
         if (n == 0) {
             return 1;
         }
         return f * power(f, n - 1);
+    }
+
+    /**
+     * "Дано натуральное число e > 1. Выведите его наименьший делитель, отличный от
+     * 1. Решение оформите в виде функции MinDivisor(e). Количество операций в
+     * программе должно быть пропорционально корню из e. Указание. Если у числа e
+     * нет делителя, меньшего e , то число e — простое и ответом будет само число
+     * e."
+     * 
+     * @param e any natural number >1.
+     * @return least divisor of a natural number e.
+     */
+    public int minDivisor(int e) {
+        if (e % 2 == 0)
+            return 2;
+        for (int i = 3; i * i <= e; i += 2) {
+            if (e % i == 0)
+                return i;
+        }
+        return e;
     }
 }

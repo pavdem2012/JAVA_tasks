@@ -43,7 +43,16 @@ public class Main {
         double f = in.nextDouble();
         System.out.print("\nВведите любое целое число n: ");
         int n = in.nextInt();
-        in.close();
         System.out.println("\nf в степени n равно: " + functionsAndRecursion.power(f, n));
+
+        // "Дано натуральное число n > 1. Выведите его наименьший делитель, отличный от
+        // 1. Решение оформите в виде функции MinDivisor(n). Количество операций в
+        // программе должно быть пропорционально корню из n. Указание. Если у числа n
+        // нет делителя, меньшего n , то число n — простое и ответом будет само число
+        // n."
+        System.out.println("\nВведите любое натуральное число e: ");
+        int e = in.nextInt();
+        System.out.println ("Наименьший делитель числа е: " + functionsAndRecursion.minDivisor(e));
+        in.close();
     }
 }
