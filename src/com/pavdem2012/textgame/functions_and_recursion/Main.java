@@ -70,9 +70,14 @@ public class Main {
         } else {
             System.out.println("Число g является простым: NO");
         }
+
         // Альтернативное решение.
         System.out.println("\nЧисло g является простым: " + functionsAndRecursion.isPrime(g));
-        in.close();
 
+        // Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех
+        // этих чисел, не используя цикл.
+        System.out.println("\nВводите целые числа (завершение последовательности 0): ");
+        functionsAndRecursion.recursionSum(0);
+        in.close();
     }
 }

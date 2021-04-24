@@ -1,5 +1,7 @@
 package com.pavdem2012.textgame.functions_and_recursion;
 
+import java.util.Scanner;
+
 public class FunctionsAndRecursion {
 
     /**
@@ -99,10 +101,15 @@ public class FunctionsAndRecursion {
     }
 
     /**
+     * "Дано натуральное число n > 1. Проверьте, является ли оно простым. Программа
+     * должна вывести слово YES, если число простое и NO, если число составное.
+     * Решение оформите в виде функции IsPrime(n), которая возвращает True для
+     * простых чисел и False для составных чисел. Количество операций в программе
+     * должно быть пропорционально корню из n."
      * 
-     * @param g
-     * @param i
-     * @return
+     * @param g any natural number >1.
+     * @param i is optional and has a default value
+     * @return true or false.
      */
     public boolean isPrime(int g, int i) {
         if (g == 2) {
@@ -135,5 +142,22 @@ public class FunctionsAndRecursion {
             return "YES";
         }
         return "NO";
+    }
+
+    /**
+     * Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех
+     * этих чисел, не используя цикл.
+     * 
+     * @param sum sum of numbers.
+     */
+    public void recursionSum(int sum) {
+        Scanner in = new Scanner(System.in);;
+        int n = in.nextInt();
+        if (n > 0) {
+            recursionSum(sum + n);
+        } else if (sum > 0 ) {
+            System.out.println("\nСумма последовательности равна: " + (int) sum + ";");
+        }
+        in.close();
     }
 }
