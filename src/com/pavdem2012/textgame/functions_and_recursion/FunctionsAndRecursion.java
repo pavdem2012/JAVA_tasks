@@ -169,11 +169,11 @@ public class FunctionsAndRecursion {
      */
     public void recursionSum(int sum) {
         Scanner in = new Scanner(System.in);
-        int n1 = in.nextInt();
-        if (n1 > 0) {
-            recursionSum(sum + n1);
+        int n = in.nextInt();
+        if (n > 0) {
+            recursionSum(sum + n);
         } else if (sum > 0) {
-            System.out.println("\nСумма последовательности равна: " + (int) sum + ";");
+            System.out.println("Сумма последовательности равна: " + (int) sum + ";");
         }
         in.close();
     }

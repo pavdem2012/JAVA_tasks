@@ -81,11 +81,11 @@ public class Main {
         System.out.println("\nВведите любое целое положительное число n: ");
         int h = in.nextInt();
         System.out.println("Число Фибоначчи равно: " + functionsAndRecursion.fib(h));
-        in.close();
 
         // Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех
         // этих чисел, не используя цикл.
         System.out.println("\nВводите целые числа (завершение последовательности 0): ");
         functionsAndRecursion.recursionSum(0);
+        in.close();
     }
 }
