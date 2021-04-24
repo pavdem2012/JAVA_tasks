@@ -145,17 +145,34 @@ public class FunctionsAndRecursion {
     }
 
     /**
+     * "Напишите функцию fib(n), которая по данному целому положительному n
+     * возвращает n-e число Фибоначчи. В этой задаче нельзя использовать циклы -
+     * используйте рекурсию. Первое и второе числа Фибоначчи равны 1, а каждое
+     * следующее равно сумме двух предыдущих."
+     * 
+     * @param h any integer.
+     * @return n-th Fibonacci number.
+     */
+    public int fib(int h) {
+        if (h == 1 | h == 2) {
+            return 1;
+        } else {
+            return fib(h - 1) + fib(h - 2);
+        }
+    }
+
+    /**
      * Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех
      * этих чисел, не используя цикл.
      * 
      * @param sum sum of numbers.
      */
     public void recursionSum(int sum) {
-        Scanner in = new Scanner(System.in);;
-        int n = in.nextInt();
-        if (n > 0) {
-            recursionSum(sum + n);
-        } else if (sum > 0 ) {
+        Scanner in = new Scanner(System.in);
+        int n1 = in.nextInt();
+        if (n1 > 0) {
+            recursionSum(sum + n1);
+        } else if (sum > 0) {
             System.out.println("\nСумма последовательности равна: " + (int) sum + ";");
         }
         in.close();
