@@ -177,4 +177,17 @@ public class FunctionsAndRecursion {
         }
         in.close();
     }
+
+    /**
+     * Дано натуральное число n. Выведите все числа от 1 до n.
+     * 
+     * @param i any integer.
+     * @return all numbers from 1 to n.
+     */
+    public String recursiveOutputNumbers(int i) {
+        if (i == 1) {
+            return "1";
+        }
+        return recursiveOutputNumbers(i - 1) + "; " + i;
+    }
 }

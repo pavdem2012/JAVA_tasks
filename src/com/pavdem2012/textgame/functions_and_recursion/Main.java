@@ -10,12 +10,12 @@ public class Main {
         // функцию min4(a, b, c, d), вычисляющую минимум 4 чисел с помощью функции min.
         // Считайте четыре целых числа и выведите их минимум.
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите любое целое число a: ");
+        System.out.print("Вычисление минимума двух чисел:\n" + "\nВведите любое целое число a: ");
         int a = in.nextInt();
         System.out.print("Введите любое целое число b: ");
         int b = in.nextInt();
         System.out.println("\nМинимальное из двух целых чисел a и b - число: " + functionsAndRecursion.getMin(a, b));
-        System.out.print("\nВведите любое целое число c: ");
+        System.out.print("\nВычисление минимума четырех чисел:\n" + "\nВведите любое целое число c: ");
         int c = in.nextInt();
         System.out.print("Введите любое целое число d: ");
         int d = in.nextInt();
@@ -26,7 +26,8 @@ public class Main {
         // distance(x1, y1, x2, y2), вычисляющую расстояние между точкой (x1. y1) и (x2,
         // y2). Считайте четыре действительных числа и выведите результат работы этой
         // функции.
-        System.out.print("\nВведите любое действительное число x1: ");
+        System.out.print("\nВычисление расстояния между точкой (x1. y1) и (x2, y2)\n"
+                + "\nВведите любое действительное число x1: ");
         double x1 = in.nextDouble();
         System.out.print("Введите любое действительное число y1: ");
         double y1 = in.nextDouble();
@@ -38,31 +39,32 @@ public class Main {
                 + functionsAndRecursion.getDistance(x1, x2, y1, y2));
 
         // "Дано действительное положительное число a и целоe число n. Вычислите a в
-        // степени n. Решение оформите в виде рекурсивной функции power(f, n)."
-        System.out.print("\nВведите любое действительное положительное число f: ");
+        // степени n. Решение оформите в виде рекурсивной функции power(a, n)."
+        System.out.print("\nВывод a в степени n:\n" + "\nВведите любое действительное положительное число a: ");
         double f = in.nextDouble();
         System.out.print("\nВведите любое целое число n: ");
         int n = in.nextInt();
-        System.out.println("\nf в степени n равно: " + functionsAndRecursion.power(f, n));
+        System.out.println("\na в степени n равно: " + functionsAndRecursion.power(f, n));
 
         // "Дано натуральное число n > 1. Выведите его наименьший делитель, отличный от
         // 1. Решение оформите в виде функции MinDivisor(n). Количество операций в
         // программе должно быть пропорционально корню из n. Указание. Если у числа n
         // нет делителя, меньшего n , то число n — простое и ответом будет само число
         // n."
-        System.out.println("\nВведите любое натуральное число e > 1: ");
+        System.out.println("\nВывод наименьшего делителя числа n > 1 отличного от 1:\n"
+                + "\nВведите любое натуральное число n > 1: ");
         int e = in.nextInt();
-        System.out.println("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e));
+        System.out.println("\nНаименьший делитель числа n: " + functionsAndRecursion.minDivisor(e));
 
         // Альтернативное решение.
-        System.out.println("\nНаименьший делитель числа е: " + functionsAndRecursion.minDivisor(e, 2));
+        System.out.println("\nНаименьший делитель числа n: " + functionsAndRecursion.minDivisor(e, 2));
 
         // "Дано натуральное число g > 1. Проверьте, является ли оно простым. Программа
         // должна вывести слово YES, если число простое и NO, если число составное.
         // Решение оформите в виде функции IsPrime(g), которая возвращает True для
         // простых чисел и False для составных чисел. Количество операций в программе
         // должно быть пропорционально корню из g."
-        System.out.println("\nВведите любое натуральное число g > 1: ");
+        System.out.println("\nПроверка является ли число простым:\n" + "\nВведите любое натуральное число g > 1: ");
         int g = in.nextInt();
         boolean isPrime = functionsAndRecursion.isPrime(g, 0);
         if (isPrime) {
@@ -78,14 +80,21 @@ public class Main {
         // возвращает n-e число Фибоначчи. В этой задаче нельзя использовать циклы -
         // используйте рекурсию. Первое и второе числа Фибоначчи равны 1, а каждое
         // следующее равно сумме двух предыдущих."
-        System.out.println("\nВведите любое целое положительное число n: ");
+        System.out.println("\nВывод n - ного числа Фибоначчи:" + "\nВведите любое целое положительное число n: ");
         int h = in.nextInt();
         System.out.println("Число Фибоначчи равно: " + functionsAndRecursion.fib(h));
 
         // Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех
         // этих чисел, не используя цикл.
-        System.out.println("\nВводите целые числа (завершение последовательности 0): ");
+        System.out.println("\nВывод суммы последовательности завершающейся 0:\n"
+                + "\nВводите целые числа (завершение последовательности 0): ");
         functionsAndRecursion.recursionSum(0);
+
+        // Дано натуральное число n. Выведите все числа от 1 до n.
+        System.out.println("\nВывод всех чисел от 1 до n = 10\n");
+        int i = 10;
+        // int i = in.nextInt();
+        System.out.println("Числа от 1 до N: " + functionsAndRecursion.recursiveOutputNumbers(i));
         in.close();
     }
 }
