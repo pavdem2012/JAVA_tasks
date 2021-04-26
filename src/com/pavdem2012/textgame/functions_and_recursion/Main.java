@@ -74,6 +74,14 @@ public class Main {
         }
 
         // Альтернативное решение.
+        isPrime = functionsAndRecursion.isPrime1(g, 2);
+        if (isPrime) {
+            System.out.println("\nЧисло g является простым: YES");
+        } else {
+            System.out.println("\nЧисло g является простым: NO");
+        }
+
+        // Еще одно альтернативное решение.
         System.out.println("\nЧисло g является простым: " + functionsAndRecursion.isPrime(g));
 
         // "Напишите функцию fib(n), которая по данному целому положительному n
