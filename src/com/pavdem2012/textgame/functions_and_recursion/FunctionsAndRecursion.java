@@ -3,6 +3,7 @@ package com.pavdem2012.textgame.functions_and_recursion;
 import java.util.Scanner;
 
 public class FunctionsAndRecursion {
+    Scanner in = new Scanner(System.in);
 
     /**
      * 
@@ -168,14 +169,13 @@ public class FunctionsAndRecursion {
      * @param sum sum of numbers.
      */
     public void recursionSum(int sum) {
-        Scanner in = new Scanner(System.in);
+        
         int n = in.nextInt();
         if (n > 0) {
             recursionSum(sum + n);
         } else if (sum > 0) {
             System.out.println("Сумма последовательности равна: " + (int) sum + ";");
         }
-        in.close();
     }
 
     /**

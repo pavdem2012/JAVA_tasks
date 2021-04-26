@@ -91,10 +91,9 @@ public class Main {
         functionsAndRecursion.recursionSum(0);
 
         // Дано натуральное число n. Выведите все числа от 1 до n.
-        System.out.println("\nВывод всех чисел от 1 до n = 10\n");
-        int i = 10;
-        // int i = in.nextInt();
-        System.out.println("Числа от 1 до N: " + functionsAndRecursion.recursiveOutputNumbers(i));
+        System.out.println("\nВывод всех чисел от 1 до n = 10\n" + "Bведите любое число n:");
+        int i = in.nextInt();
+        System.out.println("\nЧисла от 1 до N: " + functionsAndRecursion.recursiveOutputNumbers(i));
         in.close();
     }
 }
