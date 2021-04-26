@@ -6,6 +6,7 @@ public class FunctionsAndRecursion {
     Scanner in = new Scanner(System.in);
 
     /**
+     * Напишите функцию min(a, b), вычисляющую минимум двух чисел.
      * 
      * @param a any entered number.
      * @param b any entered number.
@@ -19,6 +20,8 @@ public class FunctionsAndRecursion {
     }
 
     /**
+     * напишите функцию min4(a, b, c, d), вычисляющую минимум 4 чисел с помощью
+     * функции min. Считайте четыре целых числа и выведите их минимум.
      * 
      * @param a any entered integer.
      * @param b any entered integer.
@@ -31,6 +34,10 @@ public class FunctionsAndRecursion {
     }
 
     /**
+     * Даны четыре действительных числа: x1, y1, x2, y2. Напишите функцию
+     * distance(x1, y1, x2, y2), вычисляющую расстояние между точкой (x1. y1) и (x2,
+     * y2). Считайте четыре действительных числа и выведите результат работы этой
+     * функции.
      * 
      * @param x1 any valid number entered.
      * @param x2 any valid number entered.
@@ -254,4 +261,23 @@ public class FunctionsAndRecursion {
         }
     }
 
+    /**
+     * Дана последовательность натуральных чисел (одно число в строке),
+     * завершающаяся числом 0. Выведите все нечетные положительные числа из этой
+     * последовательности, сохраняя их порядок.
+     * 
+     * @return odd sequence numbers.
+     */
+    public String getOddSequenceNumbers() {
+        int n = in.nextInt();
+        String numbers = "";
+        if (n != 0) {
+            if (n > 0 & n % 2 != 0) {
+                numbers = n + "; " + getOddSequenceNumbers();
+            } else {
+                numbers += getOddSequenceNumbers();
+            }
+        }
+        return numbers;
+    }
 }
