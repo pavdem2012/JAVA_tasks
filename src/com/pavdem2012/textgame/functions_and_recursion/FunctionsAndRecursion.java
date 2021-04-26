@@ -215,4 +215,25 @@ public class FunctionsAndRecursion {
         }
         return recursiveOutputNumbers(i - 1) + "; " + i;
     }
+
+    /**
+     * Даны два целых числа A и В (каждое в отдельной строке). Выведите все числа от
+     * A до B включительно, в порядке возрастания, если A < B, или в порядке
+     * убывания в противном случае.
+     * 
+     * @param a1 any integer.
+     * @param b1 any integer.
+     * @return all numbers from A to B inclusive, in ascending order if A <B, or in
+     *         descending order otherwise.
+     */
+    public String outputNumbers(int a1, int b1) {
+        if (a1 == b1) {
+            return Integer.toString(a1);
+        }
+        if (a1 > b1) {
+            return a1 + "; " + outputNumbers(a1 - 1, b1);
+        }
+        return a1 + "; " + outputNumbers(a1 + 1, b1);
+    }
+
 }

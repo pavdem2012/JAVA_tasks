@@ -102,6 +102,16 @@ public class Main {
         System.out.println("\nВывод всех чисел от 1 до n:\n" + "Bведите любое число n:");
         int i = in.nextInt();
         System.out.println("\nЧисла от 1 до N: " + functionsAndRecursion.recursiveOutputNumbers(i));
+
+        // Даны два целых числа A и В (каждое в отдельной строке). Выведите все числа от
+        // A до B включительно, в порядке возрастания, если A < B, или в порядке
+        // убывания в противном случае.
+        System.out.println("\nВывод всех чисел от A до B включительно:" + "\nBведите любое число A:");
+        int a1 = in.nextInt();
+        System.out.println("\nBведите любое число B:");
+        int b1 = in.nextInt();
+        System.out.println("\nПолученная последовательность: " + functionsAndRecursion.outputNumbers(a1, b1));
+        
         in.close();
     }
 }
