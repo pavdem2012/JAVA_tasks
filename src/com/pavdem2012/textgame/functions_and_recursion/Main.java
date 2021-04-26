@@ -111,7 +111,18 @@ public class Main {
         System.out.println("\nBведите любое число B:");
         int b1 = in.nextInt();
         System.out.println("\nПолученная последовательность: " + functionsAndRecursion.outputNumbers(a1, b1));
-        
+
+        // "Дано натуральное число N. Выведите слово YES, если число N является точной
+        // степенью двойки, или слово NO в противном случае. Операцией возведения в
+        // степень пользоваться нельзя!"
+        System.out.println("\nПроверка на точную степень двойки:" + "\nВведите любое натуральное число N: ");
+        double c1 = in.nextInt();
+        int exactPowerOfTwo = functionsAndRecursion.exactPowerOfTwo(c1);
+        if (exactPowerOfTwo == 1) {
+            System.out.println("Является ли число - (" + c1 + "), целой степенью двойки: \"YES\"");
+        } else {
+            System.out.println("Является ли число - (" + c1 + "), целой степенью двойки: \"NO\"");
+        }
         in.close();
     }
 }

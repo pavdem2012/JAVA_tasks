@@ -236,4 +236,22 @@ public class FunctionsAndRecursion {
         return a1 + "; " + outputNumbers(a1 + 1, b1);
     }
 
+    /**
+     * "Дано натуральное число N. Выведите слово YES, если число N является точной
+     * степенью двойки, или слово NO в противном случае. Операцией возведения в
+     * степень пользоваться нельзя!"
+     * 
+     * @param c1 any valid number entered.
+     * @return result of exactPowerOfTwo method
+     */
+    public int exactPowerOfTwo(double c1) {
+        if (c1 == 1) {
+            return 1;
+        } else if (c1 > 1 && c1 < 2) {
+            return 0;
+        } else {
+            return exactPowerOfTwo(c1 / 2);
+        }
+    }
+
 }
