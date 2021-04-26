@@ -116,12 +116,14 @@ public class FunctionsAndRecursion {
         if (g == 2) {
             return true;
         }
-        for (i = 2; i < g; i++) {
-            if (g % i == 0) {
-                return false;
-            }
+        if (g % i == 0) {
+            return false;
+        }
+        if (i <= Math.sqrt(g)) {
+            return isPrime(g, i + 1);
         }
         return true;
+
     }
 
     /**
@@ -169,7 +171,6 @@ public class FunctionsAndRecursion {
      * @param sum sum of numbers.
      */
     public void recursionSum(int sum) {
-        
         int n = in.nextInt();
         if (n > 0) {
             recursionSum(sum + n);

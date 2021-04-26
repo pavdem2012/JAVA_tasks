@@ -66,7 +66,7 @@ public class Main {
         // должно быть пропорционально корню из g."
         System.out.println("\nПроверка является ли число простым:\n" + "\nВведите любое натуральное число g > 1: ");
         int g = in.nextInt();
-        boolean isPrime = functionsAndRecursion.isPrime(g, 0);
+        boolean isPrime = functionsAndRecursion.isPrime(g, 2);
         if (isPrime) {
             System.out.println("Число g является простым: YES");
         } else {
@@ -91,7 +91,7 @@ public class Main {
         functionsAndRecursion.recursionSum(0);
 
         // Дано натуральное число n. Выведите все числа от 1 до n.
-        System.out.println("\nВывод всех чисел от 1 до n = 10\n" + "Bведите любое число n:");
+        System.out.println("\nВывод всех чисел от 1 до n:\n" + "Bведите любое число n:");
         int i = in.nextInt();
         System.out.println("\nЧисла от 1 до N: " + functionsAndRecursion.recursiveOutputNumbers(i));
         in.close();
