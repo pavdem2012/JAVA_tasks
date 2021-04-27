@@ -3,6 +3,7 @@ package com.pavdem2012.textgame.functions_and_recursion;
 import java.util.Scanner;
 
 public class FunctionsAndRecursion {
+
     Scanner in = new Scanner(System.in);
 
     /**
@@ -312,5 +313,14 @@ public class FunctionsAndRecursion {
      */
     public String getNumbersReverseOrder(String string) {
         return string.isEmpty() ? "" : getNumbersReverseOrder(string.substring(1)) + " " + string.charAt(0);
+    }
+
+    public int getSumOfDigits(int nextInt) {
+        if (nextInt < 10) {
+            return nextInt;
+        }
+        else {
+            return nextInt % 10 + getSumOfDigits(nextInt / 10);
+        }
     }
 }

@@ -143,6 +143,9 @@ public class Main {
         System.out.println("\n\nВывод всех цифр по одной, в обратном порядке." + "\nВведите любое целое число: ");
         System.out.println("\nЦифры по одной, в обратном порядке через пробел:"
                 + functionsAndRecursion.getNumbersReverseOrder(String.valueOf(in.nextInt())));
+        //Дано натуральное число N. Вычислите сумму его цифр.
+        System.out.println("\nВычисление суммы цифр натурального числа." + "\nВведите любое натуральное число:");
+        System.out.println("Сумма цифр числа равна: " + functionsAndRecursion.getSumOfDigits(in.nextInt()));
         in.close();
     }
 }
