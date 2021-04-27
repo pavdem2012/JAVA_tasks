@@ -143,9 +143,17 @@ public class Main {
         System.out.println("\n\nВывод всех цифр по одной, в обратном порядке." + "\nВведите любое целое число: ");
         System.out.println("\nЦифры по одной, в обратном порядке через пробел:"
                 + functionsAndRecursion.getNumbersReverseOrder(String.valueOf(in.nextInt())));
-        //Дано натуральное число N. Вычислите сумму его цифр.
+        // Дано натуральное число N. Вычислите сумму его цифр.
         System.out.println("\nВычисление суммы цифр натурального числа." + "\nВведите любое натуральное число:");
         System.out.println("Сумма цифр числа равна: " + functionsAndRecursion.getSumOfDigits(in.nextInt()));
+
+        // Найти наибольший общий делитель двух чисел.
+        System.out.println("\nНахождение наибольшего общего делителя двух чисел." + "\nВведите любое число А: ");
+        int a2 = in.nextInt();
+        System.out.println("Введите любое число B: ");
+        int b2 = in.nextInt();
+        System.out.println("Наибольшим общим делителем чисел " + a2 + " и " + b2 + " является число "
+                + functionsAndRecursion.getGreatestCommonDivisor(a2, b2) + ".");
         in.close();
     }
 }

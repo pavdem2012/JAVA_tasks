@@ -318,9 +318,22 @@ public class FunctionsAndRecursion {
     public int getSumOfDigits(int nextInt) {
         if (nextInt < 10) {
             return nextInt;
-        }
-        else {
+        } else {
             return nextInt % 10 + getSumOfDigits(nextInt / 10);
         }
+    }
+
+    /**
+     * Найти наибольший общий делитель двух чисел.
+     * 
+     * @param a2 any input number.
+     * @param b2 any input number.
+     * @return greatest common divisor of numbers a1 and b1.
+     */
+    public int getGreatestCommonDivisor(int a2, int b2) {
+        if (b2 == 0) {
+            return a2;
+        }
+        return getGreatestCommonDivisor(b2, a2 % b2);
     }
 }
