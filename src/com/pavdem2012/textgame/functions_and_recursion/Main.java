@@ -40,9 +40,9 @@ public class Main {
 
         // "Дано действительное положительное число a и целоe число n. Вычислите a в
         // степени n. Решение оформите в виде рекурсивной функции power(a, n)."
-        System.out.print("\nВывод a в степени n:\n" + "\nВведите любое действительное положительное число a: ");
+        System.out.print("\nВывод a в степени n:\n" + "Введите любое действительное положительное число a: ");
         double f = in.nextDouble();
-        System.out.print("\nВведите любое целое число n: ");
+        System.out.print("Введите любое целое число n: ");
         int n = in.nextInt();
         System.out.println("\na в степени n равно: " + functionsAndRecursion.power(f, n));
 
@@ -51,20 +51,20 @@ public class Main {
         // программе должно быть пропорционально корню из n. Указание. Если у числа n
         // нет делителя, меньшего n , то число n — простое и ответом будет само число
         // n."
-        System.out.println("\nВывод наименьшего делителя числа n > 1 отличного от 1:\n"
+        System.out.println("\nВывод наименьшего делителя числа n > 1 отличного от 1:"
                 + "\nВведите любое натуральное число n > 1: ");
         int e = in.nextInt();
         System.out.println("\nНаименьший делитель числа n: " + functionsAndRecursion.minDivisor(e));
 
         // Альтернативное решение.
-        System.out.println("\nНаименьший делитель числа n: " + functionsAndRecursion.minDivisor(e, 2));
+        System.out.println("Наименьший делитель числа n: " + functionsAndRecursion.minDivisor(e, 2));
 
         // "Дано натуральное число g > 1. Проверьте, является ли оно простым. Программа
         // должна вывести слово YES, если число простое и NO, если число составное.
         // Решение оформите в виде функции IsPrime(g), которая возвращает True для
         // простых чисел и False для составных чисел. Количество операций в программе
         // должно быть пропорционально корню из g."
-        System.out.println("\nПроверка является ли число простым:\n" + "\nВведите любое натуральное число g > 1: ");
+        System.out.println("\nПроверка является ли число простым:" + "\nВведите любое натуральное число g > 1: ");
         int g = in.nextInt();
         boolean isPrime = functionsAndRecursion.isPrime(g, 2);
         if (isPrime) {
@@ -76,13 +76,13 @@ public class Main {
         // Альтернативное решение.
         isPrime = functionsAndRecursion.isPrime1(g, 2);
         if (isPrime) {
-            System.out.println("\nЧисло g является простым: YES");
+            System.out.println("Число g является простым: YES");
         } else {
-            System.out.println("\nЧисло g является простым: NO");
+            System.out.println("Число g является простым: NO");
         }
 
         // Еще одно альтернативное решение.
-        System.out.println("\nЧисло g является простым: " + functionsAndRecursion.isPrime(g));
+        System.out.println("Число g является простым: " + functionsAndRecursion.isPrime(g));
 
         // "Напишите функцию fib(n), которая по данному целому положительному n
         // возвращает n-e число Фибоначчи. В этой задаче нельзя использовать циклы -
@@ -94,7 +94,7 @@ public class Main {
 
         // Дана последовательность чисел, завершающаяся числом 0. Найдите сумму всех
         // этих чисел, не используя цикл.
-        System.out.println("\nВывод суммы последовательности завершающейся 0:\n"
+        System.out.println("\nВывод суммы последовательности завершающейся 0:"
                 + "\nВводите целые числа (завершение последовательности 0): ");
         functionsAndRecursion.recursionSum(0);
 
@@ -139,6 +139,12 @@ public class Main {
 //        String input = in.nextLine();
         String input = "нет";
         System.out.printf("Слово %s", input + functionsAndRecursion.palindromeCheck(input));
+
+        // Дано натуральное число N. Выведите все его цифры по одной, в обратном
+        // порядке, разделяя их пробелами.
+        System.out.println("\n\nВывод всех цифр по одной, в обратном порядке." + "\nВведите любое целое число: ");
+        System.out.println("\nЦифры по одной, в обратном порядке через пробел: "
+                + functionsAndRecursion.getNumbersReverseOrder(String.valueOf(in.nextInt())));
         in.close();
     }
 }

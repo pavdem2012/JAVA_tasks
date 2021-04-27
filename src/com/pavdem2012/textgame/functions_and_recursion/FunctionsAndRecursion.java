@@ -302,4 +302,15 @@ public class FunctionsAndRecursion {
             }
         }
     }
+
+    /**
+     * Дано натуральное число N. Выведите все его цифры по одной, в обратном
+     * порядке, разделяя их пробелами.
+     * 
+     * @param string any input string.
+     * @return numbers in reverse order separated by a space.
+     */
+    public String getNumbersReverseOrder(String string) {
+        return string.isEmpty() ? "" : getNumbersReverseOrder(string.substring(1)) + " " + string.charAt(0);
+    }
 }
