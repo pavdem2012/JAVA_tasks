@@ -285,20 +285,20 @@ public class FunctionsAndRecursion {
      * Дано слово из строчных латинских букв. Проверить, является ли оно
      * палиндромом.
      * 
-     * @param input any word.
+     * @param input any input word.
      * @return is the word palindrome or not.
      */
     public String palindromeCheck(String input) {
         if (input.length() == 1) {
-            return " является палиндромом.";
+            return "является палиндромом.";
         } else {
             if (input.substring(0, 1).equals(input.substring(input.length() - 1, input.length()))) {
                 if (input.length() == 2) {
-                    return " является палиндромом.";
+                    return "является палиндромом.";
                 }
                 return palindromeCheck(input.substring(1, input.length() - 1));
             } else {
-                return " не является палиндромом.";
+                return "не является палиндромом.";
             }
         }
     }

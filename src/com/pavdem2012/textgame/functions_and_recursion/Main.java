@@ -135,15 +135,13 @@ public class Main {
         // Дано слово из строчных латинских букв. Проверить, является ли оно
         // палиндромом.
         System.out.println("\nПроверка на палиндром: ");
-//        System.out.println("\nВведите слово строчными буквами: ");
-//        String input = in.nextLine();
-        String input = "нет";
-        System.out.printf("Слово %s", input + functionsAndRecursion.palindromeCheck(input));
+        System.out.println("Введите слово строчными буквами: ");
+        System.out.printf("Слово %s", in.nextLine() + functionsAndRecursion.palindromeCheck(in.nextLine()));
 
         // Дано натуральное число N. Выведите все его цифры по одной, в обратном
         // порядке, разделяя их пробелами.
         System.out.println("\n\nВывод всех цифр по одной, в обратном порядке." + "\nВведите любое целое число: ");
-        System.out.println("\nЦифры по одной, в обратном порядке через пробел: "
+        System.out.println("\nЦифры по одной, в обратном порядке через пробел:"
                 + functionsAndRecursion.getNumbersReverseOrder(String.valueOf(in.nextInt())));
         in.close();
     }
